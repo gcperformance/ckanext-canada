@@ -28,7 +28,7 @@ resources:
     validation: This field must not be empty
     occurrence: Single
     datastore_type: text
-    choices_file: choices/service_fiscal_yr.yaml
+    choices_file: choices/fiscal_yr.yaml
 
   # 2
   - datastore_id: service_id
