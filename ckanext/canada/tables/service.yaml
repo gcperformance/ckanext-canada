@@ -1,4 +1,3 @@
-# NOTE: Service Inventory Search has been deprecated. Records remain in the Registry DB. (2020-06)
 dataset_type: service
 target_dataset: service
 
@@ -6,19 +5,17 @@ title: Service Inventory
 notes: Access, upload and modify the Service Inventory of external and internal enterprise services for your organization
 
 template_version: 3
-template_updated: 2019-06-11
+template_updated: 2024-07-01
 
 portal_type: dataset
 collection: service
-
-gcpedia_link: http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda
 
 resources:
 - title: Service Identification Information & Metrics
   resource_name: service
   fields:
 
-  # 3.1
+  # 1
   - datastore_id: fiscal_yr
     label:
       en: Fiscal Year
@@ -33,7 +30,7 @@ resources:
     datastore_type: text
     choices_file: choices/service_fiscal_yr.yaml
 
-  # 3.2 (was service_id_number)
+  # 2
   - datastore_id: service_id
     label:
       en: Service ID Number
@@ -48,7 +45,39 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 3.3
+  # 3 (fix)
+  - datastore_id: department_name_en
+    label:
+      en: Service Name (English)
+      fr: Nom du service (en anglais)
+    description:
+      en: Identifies the official name of the service.
+      fr: Indique le nom officiel du service.
+    obligation: Mandatory
+    excel_required: true
+    format_type: Free text
+    validation: This field must not be empty
+    occurrence: Single
+    datastore_type: text
+    excel_column_width: 28
+
+  #4 (fix)
+  - datastore_id: department_name_fr
+    label:
+      en: Service Name (English)
+      fr: Nom du service (en anglais)
+    description:
+      en: Identifies the official name of the service.
+      fr: Indique le nom officiel du service.
+    obligation: Mandatory
+    excel_required: true
+    format_type: Free text
+    validation: This field must not be empty
+    occurrence: Single
+    datastore_type: text
+    excel_column_width: 28
+
+  # 5
   - datastore_id: service_name_en
     label:
       en: Service Name (English)
@@ -64,7 +93,7 @@ resources:
     datastore_type: text
     excel_column_width: 28
 
-  # 3.4
+  # 6
   - datastore_id: service_name_fr
     label:
       en: Service Name (French)
@@ -79,33 +108,63 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 3.5
-  - datastore_id: external_internal
+  # 7 
+  - datastore_id: service_description_en
     label:
-      en: External Service or Internal Enterprise Service
-      fr: Service externe ou service intégré interne
+      en: Service Description (English)
+      fr: Description du service (en anglais)
     description:
-      en: Identifies the service as either an external service or internal enterprise service, as defined in the Policy on Service.
-      fr: Identifie le service en tant que service externe ou service interne intégré au sens des définitions données dans la Politique sur les services.
+      en: Provides a brief description of the service, in plain language.
+      fr: Offre une brève description du service.
     obligation: Mandatory
     excel_required: true
-    format_type: Controlled List
+    format_type: Free text
     validation: This field must not be empty
     occurrence: Single
     datastore_type: text
-    excel_full_text_choices: true
-    choices:
-      EI:
-        en: External/Internal Enterprise Service
-        fr: Services externes/internes intégrés
-      EX:
-        en: External Service
-        fr: Services externes
-      IN:
-        en: Internal Enterprise Service
-        fr: Services internes intégrés
 
-  # 3.6
+  # 8 
+  - datastore_id: service_description_fr
+    label:
+      en: Service Description (French)
+      fr: Description du service (en français)
+    description:
+      en: Provides a brief description of the service, in plain language.
+      fr: Offre une brève description du service.
+    obligation: Mandatory
+    excel_required: true
+    format_type: Free text
+    validation: This field must not be empty
+    occurrence: Single
+    datastore_type: text
+
+  # # 3.5
+  # - datastore_id: external_internal
+  #   label:
+  #     en: External Service or Internal Enterprise Service
+  #     fr: Service externe ou service intégré interne
+  #   description:
+  #     en: Identifies the service as either an external service or internal enterprise service, as defined in the Policy on Service.
+  #     fr: Identifie le service en tant que service externe ou service interne intégré au sens des définitions données dans la Politique sur les services.
+  #   obligation: Mandatory
+  #   excel_required: true
+  #   format_type: Controlled List
+  #   validation: This field must not be empty
+  #   occurrence: Single
+  #   datastore_type: text
+  #   excel_full_text_choices: true
+  #   choices:
+  #     EI:
+  #       en: External/Internal Enterprise Service
+  #       fr: Services externes/internes intégrés
+  #     EX:
+  #       en: External Service
+  #       fr: Services externes
+  #     IN:
+  #       en: Internal Enterprise Service
+  #       fr: Services internes intégrés
+
+  # 9
   - datastore_id: service_type
     label:
       en: Service Type
@@ -169,6 +228,10 @@ resources:
       RU:
         en: Rule Making
         fr: Établissement de règles
+
+  # 10
+  - datastore_id: service_recipient_type
+ 
 
   # 3.7
   - datastore_id: special_designations
