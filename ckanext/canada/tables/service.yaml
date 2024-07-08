@@ -15,14 +15,14 @@ resources:
   resource_name: service
   fields:
 
-  # 1
+
   - datastore_id: fiscal_yr
     label:
       en: Fiscal Year
       fr: Année financière
     description:
       en: Identifies the fiscal year for which service data is reported
-      fr: Indique l’exercice pour lequel les données sur les services sont déclarées.
+      fr: Indique l'exercice financier pour lequel les données sur les services sont déclarées.
     obligation: Mandatory
     excel_required: true
     validation: This field must not be empty
@@ -30,14 +30,14 @@ resources:
     datastore_type: text
     choices_file: choices/fiscal_yr.yaml
 
-  # 2
+
   - datastore_id: service_id
     label:
       en: Service ID Number
       fr: Numéro d'identification du service
     description:
       en: The unique number assigned by the department to a service in the inventory to make it easier to refer to specific services.
-      fr: Le numéro unique attribué par le ministère ou l’organisme à un service dans le répertoire afin de faciliter le référencement à des services précis. (p. ex. 1, 2, etc.)
+      fr: Le numéro unique attribué par le ministère ou l'organisme à un service dans le répertoire afin de faciliter le référencement à des services précis.
     obligation: Mandatory
     excel_required: true
     format_type: Free text
@@ -45,7 +45,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 3 (fix)
+
   - datastore_id: department_name_en
     label:
       en: Service Name (English)
@@ -61,7 +61,7 @@ resources:
     datastore_type: text
     excel_column_width: 28
 
-  #4 (fix)
+
   - datastore_id: department_name_fr
     label:
       en: Service Name (English)
@@ -77,7 +77,7 @@ resources:
     datastore_type: text
     excel_column_width: 28
 
-  # 5
+
   - datastore_id: service_name_en
     label:
       en: Service Name (English)
@@ -93,7 +93,7 @@ resources:
     datastore_type: text
     excel_column_width: 28
 
-  # 6
+
   - datastore_id: service_name_fr
     label:
       en: Service Name (French)
@@ -108,7 +108,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 7 
+
   - datastore_id: service_description_en
     label:
       en: Service Description (English)
@@ -123,7 +123,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 8 
+
   - datastore_id: service_description_fr
     label:
       en: Service Description (French)
@@ -138,236 +138,149 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # # 3.5
-  # - datastore_id: external_internal
-  #   label:
-  #     en: External Service or Internal Enterprise Service
-  #     fr: Service externe ou service intégré interne
-  #   description:
-  #     en: Identifies the service as either an external service or internal enterprise service, as defined in the Policy on Service.
-  #     fr: Identifie le service en tant que service externe ou service interne intégré au sens des définitions données dans la Politique sur les services.
-  #   obligation: Mandatory
-  #   excel_required: true
-  #   format_type: Controlled List
-  #   validation: This field must not be empty
-  #   occurrence: Single
-  #   datastore_type: text
-  #   excel_full_text_choices: true
-  #   choices:
-  #     EI:
-  #       en: External/Internal Enterprise Service
-  #       fr: Services externes/internes intégrés
-  #     EX:
-  #       en: External Service
-  #       fr: Services externes
-  #     IN:
-  #       en: Internal Enterprise Service
-  #       fr: Services internes intégrés
 
-  # 9
   - datastore_id: service_type
     label:
       en: Service Type
       fr: Type de service
     description:
-      en: Identifies the external or internal service type as outlined in the Guideline on Service Management.
-      fr: Indique le type de service externe ou interne.
+      en: Identifies the service type as outlined in the Guideline on Service and Digital.
+      fr: Indique le type de service tel qu'indiqué dans la Ligne directrice sur les services et le numérique
     obligation: Mandatory
     excel_required: true
     format_type: Controlled List
     validation: This field must not be empty
-    occurrence: Single
+    occurrence: Multiple
     datastore_type: text
     excel_full_text_choices: true
     choices:
-      AC:
-        en: Acquisition Services
-        fr: Services d’acquisition
-      AD:
-        en: Advisory Services
-        fr: Services consultatifs
-      COM:
-        en: Communications Services
-        fr: Services de communication
-      ED:
-        en: Educational, Recreational and Cultural Encounters
-        fr: Rencontres axées sur des activités éducatives, récréatives et culturelles
-      FIN:
-        en: Financial Management Services
-        fr: Services de gestion financière
-      HR:
-        en: Human Resources Management Services
-        fr: Services de gestion des ressources humaines
-      HVRT:
-        en: High Volume Regulatory Transaction
-        fr: Opérations réglementaires à demande élevée
-      IM:
-        en: Information Management Services
-        fr: Services de gestion de l’information
-      IT:
-        en: Information Technology Services
-        fr: Services de technologie de l’information
-      LEG:
-        en: Legal Services
-        fr: Services juridiques
-      MAN:
-        en: Management and Oversight Services
-        fr: Services de gestion et de surveillance
-      MAT:
-        en: Materiel Services
-        fr: Services de gestion du matériel
-      REG:
-        en: Regulatory Compliance and Enforcement
-        fr: Conformité aux règlements et application des règlements
-      RES:
+      cer:
+        en: Care, Education, Recreation
+        fr: Soins, éducation, loisirs
+      gnc:
+        en: Grants and Contributions
+        fr: Subventions et contributions
+      reg_vol:
+        en: High Volume Regulatory Transactions
+        fr: Opérations reglementaires à demande élevée
+      res:
         en: Resources
         fr: Ressources
-      RP:
-        en: Real Property Services
-        fr: Services immobiliers
-      RU:
-        en: Rule Making
-        fr: Établissement de règles
+      apir:
+        en: Agreements, Permissions, Inspections, Rulings
+        fr: Accords, autorisations, inspections, décisions
+      lrp:
+        en: Legislation, Regulation, Policy
+        fr: Législation, réglementation, politique
+      info:
+        en: Information
+        fr: Informations
+      ppi:
+        en: Penalities, Protection, Intervention
+        fr: Pénalités, protection, interventions
 
-  # 10
+
   - datastore_id: service_recipient_type
-  # comment here
- 
-
-  # 3.7
-  - datastore_id: special_designations
     label:
-      en: Special Designations
-      fr: Désignations spéciales
+      en: Service Recipient Type
+      fr: Type de bénéficiaire du service
     description:
-      en: Identifies the service as a priority service, a mission critical service and/or an essential service. These designations are not mutually exclusive and more than one designation can be listed.
-      fr: Identifie le service comme un service prioritaire, un service critique à la mission et / ou un service essentiel. Ces désignations ne sont pas mutuellement exclusives et plus d'une désignation être indiquée.
+      en: Indicates whether the service is client-based or societal #GE: this must be better defined inEN&FR
+      fr: Indique si le service vise des clients ou la société en général
     obligation: Mandatory
     excel_required: true
     format_type: Controlled List
     validation: This field must not be empty
     occurrence: Single
     datastore_type: text
-    excel_full_text_choices: true
+    excel_full_text_choices: true #GE: what is this?
     choices:
-      '1':
-        en: Priority Service
-        fr: Service prioritaire
-      '2':
-        en: Critical Service
-        fr: Service critique
-      '3':
-        en: Essential Service
-        fr: Service essentiel
-      '4':
-        en: Priority Service & Mission Critical Service
-        fr: Service prioritaire et Service critique
-      '5':
-        en: Priority Service & Essential Service
-        fr: Service prioritaire et Service essentiel
-      '6':
-        en: Critical Service & Essential Service
-        fr: Service critique et Service essentiel
-      '7':
-        en: Priority Service, Critical Service & Essential Service
-        fr: Service prioritaire, service critique et Service essentiel
-      '8':
-        en: None of the above
-        fr: Aucun des éléments ci-dessus
+      client:
+        en: Targeted, Client-based service
+        fr: Service ciblé, axé sur les clients
+      society:
+        en: Untargeted, Societal-based service
+        fr: Service non-ciblé, axé sur la société
 
-  # 3.8
-  - datastore_id: service_description_en
+
+  - datastore_id: service_scope
     label:
-      en: Service Description (English)
-      fr: Description du service (en anglais)
+      en: Service Scope
+      fr: Service scope #GE: translate this
     description:
-      en: Provides a brief description of the service, in plain language.
-      fr: Offre une brève description du service.
+      en: Indicates whether the service is external or internal to government.
+      fr: Indique si le service est offert aux clients externes ou internes au gouvernement #GE: translate this better
     obligation: Mandatory
     excel_required: true
-    format_type: Free text
+    format_type: Controlled List
     validation: This field must not be empty
+    occurrence: Multiple
+    datastore_type: text
+    excel_full_text_choices: true #GE: what is this?
+    choices:
+      intern:
+        en: Internal Service
+        fr: Service interne
+      extern:
+        en: External Service
+        fr: Service externe
+      enterprise:
+        en: Internal Enterprise Service
+        fr: Service interne intégré
+      cluster: #GE: what even is this
+        en: Internal Cluster Service
+        fr: Service cluster interne
+
+
+  - datastore_id: client_target_groups
+    label:
+      en: Client/Target Groups
+      fr: Clients/groupes cibles
+    description:
+      en: Identifies the clients or target groups of the service.
+      fr: Identifie les clients ou les groupes de services cibles.
+    obligation: Mandatory
+    excel_required: true
+    format_type: Controlled List
+    validation: This field must not be empty
+    occurrence: Multiple
+    datastore_type: text
+    excel_column_width: 21 #GE: what's this for?
+    choices:
+      person:
+        en: Persons
+        fr: Particuliers
+      ngo:
+        en: Non Profit Institutions and Organizations
+        fr: Institutions et organismes sans but lucratif
+      econom:
+        en: Economic Segments (Businesses)
+        fr: Segments économiques (entreprises)
+      for:
+        en: Foreign Entities
+        fr: Entités étrangères
+      ptc:
+        en: Provinces, Territories or Communities
+        fr: Provinces, territoires et collectivités
+      intern_gov:
+        en: Internal to Government
+        fr: Interne au gouvernement
+
+    #GE: This field will need to be controlled somehow
+  - datastore_id: program_id_code
+    label:
+      en: Program ID Code
+      fr: Code d'identification du programme
+    description:
+      en: Identifies the unique program code associated with program elements for all strategic outcomes, programs, sub-programs, and sub-sub-programs. The Program codes in the government-wide Chart of Accounts can be used. Corporate planners in the department/agency who are responsible for the Policy on Results can assist in identifying this, if needed.
+      fr: Indique le code de programme unique associé aux éléments de programme pour tous les résultats stratégiques, les programmes, les sous-programmes et les sous-sous-programmes. Les planificateurs ministériels du ministère ou de l'organisme responsables de la Politique sur les résultats peuvent aider à déterminer le code d'identification du programme, au besoin.
+    obligation: Optional
+    excel_required: true
+    format_type: Free text #GE: can we define a mask, like postal code, to check validity, i.e. ABC00, otherwise we need to point to the code list from chart of accounts
     occurrence: Single
     datastore_type: text
 
-  # 3.9
-  - datastore_id: service_description_fr
-    label:
-      en: Service Description (French)
-      fr: Description du service (en français)
-    description:
-      en: Provides a brief description of the service, in plain language.
-      fr: Offre une brève description du service.
-    obligation: Mandatory
-    excel_required: true
-    format_type: Free text
-    validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
 
-  # 3.10
-  - datastore_id: authority_en
-    label:
-      en: Authority (English)
-      fr: Instruments habilitants (en anglais)
-    description:
-      en: Identifies the relevant legislation and policies that grant the authority for the establishment of the service.
-      fr: Indique le nom du groupe au sein de l’organisation qui est responsable du service.
-    obligation: Mandatory
-    excel_required: true
-    format_type: Free text
-    validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
-    excel_column_width: 51
-
-  # 3.11
-  - datastore_id: authority_fr
-    label:
-      en: Authority (French)
-      fr: Instruments habilitants (en français)
-    description:
-      en: Identifies the relevant legislation and policies that grant the authority for the establishment of the service.
-      fr: Indique le nom du groupe au sein de l’organisation qui est responsable du service.
-    obligation: Mandatory
-    excel_required: true
-    format_type: Free text
-    validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
-    excel_column_width: 51
-
-  # 3.12 (new field)
-  - datastore_id: service_url_en
-    label:
-      en: URL to Service (English)
-      fr: URL du service (anglais)
-    description:
-      en: Identifies the departmental webpage where the service is described and/or accessed.
-      fr: Indique la page Web du ministère où le service est décrit et/ou peut être lancé.
-    obligation: Mandatory
-    excel_required: true
-    format_type: Free text
-    validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
-
-  # 3.13
-  - datastore_id: service_url_fr
-    label:
-      en: URL to Service (French)
-      fr: URL du service (français)
-    description:
-      en: Identifies the departmental webpage where the service is described and/or accessed.
-      fr: Indique la page Web du ministère où le service est décrit et/ou peut être lancé.
-    obligation: Mandatory
-    excel_required: true
-    format_type: Free text
-    validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
-
-  # 3.14
   - datastore_id: program_name_en
     label:
       en: Program Name (English)
@@ -375,14 +288,13 @@ resources:
     description:
       en: Identifies the name of the program under which the service is delivered.
       fr: Indique le nom du programme sous lequel le service est offert.
-    obligation: Mandatory
+    obligation: Optional
     excel_required: true
     format_type: Free text
-    validation: This field must not be empty
     occurrence: Single
     datastore_type: text
 
-  # 3.15
+
   - datastore_id: program_name_fr
     label:
       en: Program Name (French)
@@ -390,65 +302,51 @@ resources:
     description:
       en: Identifies the name of the program under which the service is delivered.
       fr: Indique le nom du programme sous lequel le service est offert.
-    obligation: Mandatory
+    obligation: Optional
     excel_required: true
     format_type: Free text
     validation: This field must not be empty
     occurrence: Single
     datastore_type: text
 
-  # 3.16 (was program_id_number)
-  - datastore_id: program_id_code
-    label:
-      en: Program ID Code
-      fr: Code d'identification du programme
-    description:
-      en: Identifies the unique program code associated with program elements for all strategic outcomes, programs, sub-programs, and sub-sub-programs. For departments/agencies that have moved to the Departmental Results Framework (DRF), the Program codes in the government-wide Chart of Accounts can be used. Corporate planners in the department/agency who are responsible for the Policy on Results can assist in identifying this, if needed.
-      fr: Indique le code de programme unique associé aux éléments de programme pour tous les résultats stratégiques, les programmes, les sous-programmes et les sous-sous-programmes. Les planificateurs ministériels du ministère ou de l’organisme responsables de la Politique sur les résultats peuvent aider à déterminer le code d’identification du programme, au besoin.
-    obligation: Mandatory
-    excel_required: true
-    format_type: Free text
-    validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
 
-  # 3.17
-  - datastore_id: client_target_groups
+  - datastore_id: client_feedback
     label:
-      en: Client/Target Groups
-      fr: Clients/groupes cibles
+      en: Client feedback channels
+      fr: Canaux de rétroaction des clients
     description:
-      en: "Identifies the clients or target groups of the service.  Note: Should you require further clarification with regard to these categories, please consult the Standard on Tagging, in the Policy on Results."
-      fr: "Identifie les clients ou les groupes de services cibles.
-      Remarque : Pour obtenir d’autres éclaircissements relativement à ces catégories, veuillez consulter la Norme sur l’étiquetage prévue dans la Politique sur les résultats."
-    obligation: Mandatory
-    excel_required: true
+      en: Identifies which channels provide users of a service an opportunity to provide feedback on their level of satisfaction with the service
+      fr: Détermine quels canaux offrent aux utilisateurs d'un service l'occasion de donner une rétroaction sur leur niveau de satisfaction à l'égard du service.
     format_type: Controlled List
-    validation: This field must not be empty
     occurrence: Multiple
-    datastore_type: _text
-    excel_column_width: 21
+    datastore_type: text
     choices:
-      PP:
-        en: Persons
-        fr: Particuliers
-      IO:
-        en: Non Profit Institutions and Organizations
-        fr: Institutions et organismes sans but lucratif
-      ES:
-        en: Economic Segments (Businesses)
-        fr: Segments économiques (entreprises)
-      FE:
-        en: Foreign Entities
-        fr: Entités étrangères
-      PTC:
-        en: Provinces, Territories or Communities
-        fr: Provinces, territoires et collectivités
-      IG:
-        en: Internal to Government
-        fr: Interne au gouvernement
+      onl:
+        en: Online
+        fr: En ligne
+      tel:
+        en: Telephone
+        fr: Téléphone
+      person:
+        en: In-Person
+        fr: En personne
+      eml:
+        en: Email
+        fr: Courriel
+      fax:
+        en: Fax
+        fr: Télécopieur
+      post:
+        en: Postal Mail
+        fr: Courrier postal
+      non:
+        en: No feedback collected
+        fr: Aucune rétroaction possible
+      oth:
+        en: Other channel not listed
+        fr: Autre option qui n'est pas sur la liste
 
-  # 3.18 (was user_fee)
+
   - datastore_id: service_fee
     label:
       en: Service Fees
@@ -461,21 +359,216 @@ resources:
     format_type: Controlled List
     validation: This field must not be empty
     occurrence: Single
+    datastore_type: numeric
+    excel_full_text_choices: true
+    choices:
+      1:
+        en: "Yes"
+        fr: Oui
+      0:
+        en: "No"
+        fr: Non
+
+
+  - datastore_id: e_registration
+    label:
+      en: "Online services: Account Registration/Enrollment"
+      fr: "Services en ligne: Enregistrement/ inscription du compte"
+    description:
+      en: Identifies whether a client can register or enrol for a personal account where they can make use of other interaction points. 
+      fr: Indique si un client peut s'inscrire à un compte personnel ou il peut utiliser d'autres points d'intéraction
+    obligation: Mandatory
+    excel_required: true
+    format_type: Controlled List
+    validation: This field must not be empty
+    occurrence: Single
+    datastore_type: numeric
+    excel_full_text_choices: true
+    choices:
+      1:
+        en: "Yes (This interaction point is applicable to the service and is online)"
+        fr: "Oui (Ce point d'interaction s'applique au service et est de nature électronique)"
+      0:
+        en: "No (This interaction point is applicable to the service but is not currently online)"
+        fr: "Non (Ce point d'interaction s'applique au service, mais il n'est pas de nature électronique présentement)"
+      -1: #GE: Can we do this?
+        en: "N/A (This interaction point is not applicable to the service)"
+        fr: "S.O. (Ce point d'interaction ne s'applique pas au service)"
+
+
+  - datastore_id: e_authentication
+    label:
+      en: "Online Services: Authentication"
+      fr: "Services en ligne: Authentification"
+    description:
+      en: Identifies whether a client can confirm their identity online
+      fr: Indique si un client peut confirmer son identité en ligne
+    obligation: Mandatory
+    excel_required: true
+    format_type: Controlled List
+    validation: This field must not be empty
+    occurrence: Single
+    datastore_type: numeric
+    excel_full_text_choices: true
+    choices:
+      1:
+        en: "Yes (This interaction point is applicable to the service and is online)"
+        fr: "Oui (Ce point d'interaction s'applique au service et est de nature électronique)"
+      0:
+        en: "No (This interaction point is applicable to the service but is not currently online)"
+        fr: "Non (Ce point d'interaction s'applique au service, mais il n'est pas de nature électronique présentement)"
+      -1: #GE: Can we do this?
+        en: "N/A (This interaction point is not applicable to the service)"
+        fr: "S.O. (Ce point d'interaction ne s'applique pas au service)"
+
+
+  - datastore_id: e_application
+    label:
+      en: "Online Services: Application"
+      fr: "Services en-ligne : Demande"
+    description:
+      en: Identifies whether a client can apply for a service online
+      fr: Indique si un client peut présenter une demande de service en ligne
+    obligation: Mandatory
+    excel_required: true
+    format_type: Controlled List
+    validation: This field must not be empty
+    occurrence: Single
     datastore_type: text
     excel_full_text_choices: true
     choices:
-      Y:
-        en: "Yes"
-        fr: Oui
-      N:
-        en: "No"
-        fr: Non
+      1:
+        en: "Yes (This interaction point is applicable to the service and is online)"
+        fr: "Oui (Ce point d'interaction s'applique au service et est de nature électronique)"
+      0:
+        en: "No (This interaction point is applicable to the service but is not currently online)"
+        fr: "Non (Ce point d'interaction s'applique au service, mais il n'est pas de nature électronique présentement)"
+      -1: #GE: Can we do this?
+        en: "N/A (This interaction point is not applicable to the service)"
+        fr: "S.O. (Ce point d'interaction ne s'applique pas au service)"
+
+
+  - datastore_id: e_decision
+    label:
+      en: "Online Services: Decision"
+      fr: "Services en-ligne : Décision"
+    description:
+      en: Identifies whether a client can be notified online of the outcome of their request for this service
+      fr: Indique si un client peut être informé en ligne du résultat de sa demande de service
+    obligation: Mandatory
+    excel_required: true
+    format_type: Controlled List
+    validation: This field must not be empty
+    occurrence: Single
+    datastore_type: text
+    excel_full_text_choices: true
+    choices:
+      1:
+        en: "Yes (This interaction point is applicable to the service and is online)"
+        fr: "Oui (Ce point d'interaction s'applique au service et est de nature électronique)"
+      0:
+        en: "No (This interaction point is applicable to the service but is not currently online)"
+        fr: "Non (Ce point d'interaction s'applique au service, mais il n'est pas de nature électronique présentement)"
+      -1: #GE: Can we do this?
+        en: "N/A (This interaction point is not applicable to the service)"
+        fr: "S.O. (Ce point d'interaction ne s'applique pas au service)"
+
+  # 3.32
+  - datastore_id: e_issuance
+    label:
+      en: "Online Services: Issuance"
+      fr: "Services électroniques: Émission"
+    description:
+      en: Identifies whether a client can receive the service online, for example permits, certificates, money or information
+      fr: Indique si le client peut recevoir le service en ligne, par exemple des permis, des certificats, de l'argent ou de l'information 
+    obligation: Mandatory
+    excel_required: true
+    format_type: Controlled List
+    validation: This field must not be empty
+    occurrence: Single
+    datastore_type: text
+    excel_full_text_choices: true
+    choices:
+      1:
+        en: "Yes (This interaction point is applicable to the service and is online)"
+        fr: "Oui (Ce point d'interaction s'applique au service et est de nature électronique)"
+      0:
+        en: "No (This interaction point is applicable to the service but is not currently online)"
+        fr: "Non (Ce point d'interaction s'applique au service, mais il n'est pas de nature électronique présentement)"
+      -1: #GE: Can we do this?
+        en: "N/A (This interaction point is not applicable to the service)"
+        fr: "S.O. (Ce point d'interaction ne s'applique pas au service)"
+
+  # 3.33
+  - datastore_id: e_feedback
+    label:
+      en: "Online Services: Issue Resolution and Feedback"
+      fr: "Services électroniques: Solution de problème et rétroaction"
+    description:
+      en: Identifies whether a client can seek resolution to their issues or provide feedback online
+      fr: Indique si un client peut demander une résolution à leur problèmes avec le service ou fournir de la rétroaction en ligne.
+    obligation: Mandatory
+    excel_required: true
+    format_type: Controlled List
+    validation: This field must not be empty
+    occurrence: Single
+    datastore_type: text
+    excel_full_text_choices: true
+    choices:
+      1:
+        en: "Yes (This interaction point is applicable to the service and is online)"
+        fr: "Oui (Ce point d'interaction s'applique au service et est de nature électronique)"
+      0:
+        en: "No (This interaction point is applicable to the service but is not currently online)"
+        fr: "Non (Ce point d'interaction s'applique au service, mais il n'est pas de nature électronique présentement)"
+      -1: #GE: Can we do this?
+        en: "N/A (This interaction point is not applicable to the service)"
+        fr: "S.O. (Ce point d'interaction ne s'applique pas au service)"
+
+#GE: I got this far 2024-07-08
+
+  - datastore_id: service_url_en
+    label:
+      en: URL to Service (English)
+      fr: URL du service (anglais)
+    description:
+      en: Identifies the departmental webpage where the service is described and/or accessed in English.
+      fr: Indique la page Web du ministère où le service est décrit et/ou peut être lancé en anglais.
+    obligation: Mandatory
+    excel_required: true
+    format_type: Free text
+    validation: This field must not be empty
+    occurrence: Single
+    datastore_type: text
+
+  # 45
+  - datastore_id: service_url_fr
+    label:
+      en: URL to Service (French)
+      fr: URL du service (français)
+    description:
+      en: Identifies the departmental webpage where the service is described and/or accessed in French.
+      fr: Indique la page web du ministère où le service est décrit et/ou peut être lancé en français.
+    obligation: Mandatory
+    excel_required: true
+    format_type: Free text
+    validation: This field must not be empty
+    occurrence: Single
+    datastore_type: text
+
+  
+
+
+
+  
+
+
 
   # 3.19
   - datastore_id: cra_business_number
     label:
       en: Use of CRA Business Number
-      fr: Utilisation du numéro d’entreprise de l’ARC
+      fr: Utilisation du numéro d'entreprise de l'ARC
     description:
       en: Identifies whether the Canada Revenue Agency's Business Number is used in the delivery of the service if the service is delivered to a business.
       fr: Identifie si le numéro d'entreprise de l'Agence du Revenu du Canada est utilisé dans la prestation du service, si le service est livré à une entreprise.
@@ -495,16 +588,16 @@ resources:
         fr: Non
       NA:
         en: N/A (not a service to businesses)
-        fr: S.O. (N’est pas un service aux entreprises)
+        fr: S.O. (N'est pas un service aux entreprises)
 
   # 3.20 (new field)
   - datastore_id: use_of_sin
     label:
       en: Use of Social Insurance Number
-      fr: Utilisation du numéro d’assurance sociale (NAS)
+      fr: Utilisation du numéro d'assurance sociale (NAS)
     description:
       en: Identifies whether the Social Insurance Number (SIN) is used in the delivery of the service.
-      fr: Indique si le numéro d’assurance sociale (NAS) est utilisé dans la prestation du service.
+      fr: Indique si le numéro d'assurance sociale (NAS) est utilisé dans la prestation du service.
     obligation: Mandatory
     excel_required: true
     format_type: Controlled List
@@ -521,7 +614,7 @@ resources:
         fr: Non
       NA:
         en: N/A (not a service to individuals)
-        fr: S.O. (n’est pas un service aux particuliers)
+        fr: S.O. (n'est pas un service aux particuliers)
 
   # 3.21 (was volumes_per_channel_online)
   - datastore_id: online_applications
@@ -536,8 +629,8 @@ resources:
         • If the service is not offered online, please indicate that this field is not applicable (NA).
         • If data is not available, please indicate that there is no data (ND).
       fr: |
-        Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
-        Remarque : Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
+        Indique le nombre de demandes reçues au cours d'un exercice pour chacun des modes de prestation suivants.
+        Remarque : Si un service n'est pas offert au moyen d'un mode de prestation, veuillez indiquer que cette question est sans objet (NA). Si aucune donnée n'est disponible, veuillez indiquer qu'il n'y a aucune donnée (ND).
     obligation: Mandatory
     excel_required: true
     excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
@@ -550,7 +643,7 @@ resources:
   - datastore_id: web_visits_info_service
     label:
       en: Number of Website Visits (Information-Based Services)
-      fr: Nombre de visites sur le site Web (services d’information)
+      fr: Nombre de visites sur le site Web (services d'information)
     description:
       en: |
         Identifies the number of website visits in a fiscal year for obtaining information-based services.
@@ -559,8 +652,8 @@ resources:
         • If the service is not offered online, please indicate that this field is not applicable (NA).
         • If data is not available, please indicate that there is no data (ND).
       fr: |
-        Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
-        Remarque : Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
+        Indique le nombre de demandes reçues au cours d'un exercice pour chacun des modes de prestation suivants.
+        Remarque : Si un service n'est pas offert au moyen d'un mode de prestation, veuillez indiquer que cette question est sans objet (NA). Si aucune donnée n'est disponible, veuillez indiquer qu'il n'y a aucune donnée (ND).
     obligation: Mandatory
     excel_required: true
     excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
@@ -573,7 +666,7 @@ resources:
   - datastore_id: calls_received
     label:
       en: Number of Telephone Calls Received
-      fr: Nombre d’appels téléphoniques reçus
+      fr: Nombre d'appels téléphoniques reçus
     description:
       en: |
         Identifies the number of telephone calls received for the service in a fiscal year.
@@ -582,8 +675,8 @@ resources:
         • If the service is not offered via telephone, please indicate that this field is not applicable (NA).
         • If data is not available, please indicate that there is no data (ND).
       fr: |
-        Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
-        Remarque : Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
+        Indique le nombre de demandes reçues au cours d'un exercice pour chacun des modes de prestation suivants.
+        Remarque : Si un service n'est pas offert au moyen d'un mode de prestation, veuillez indiquer que cette question est sans objet (NA). Si aucune donnée n'est disponible, veuillez indiquer qu'il n'y a aucune donnée (ND).
     obligation: Mandatory
     excel_required: true
     excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
@@ -605,8 +698,8 @@ resources:
         • If the service is not offered in-person, please indicate that this field is not applicable (NA).
         • If data is not available, please indicate that there is no data (ND).
       fr: |
-        Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
-        Remarque : Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
+        Indique le nombre de demandes reçues au cours d'un exercice pour chacun des modes de prestation suivants.
+        Remarque : Si un service n'est pas offert au moyen d'un mode de prestation, veuillez indiquer que cette question est sans objet (NA). Si aucune donnée n'est disponible, veuillez indiquer qu'il n'y a aucune donnée (ND).
     obligation: Mandatory
     excel_required: true
     excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
@@ -628,8 +721,8 @@ resources:
         • If the service cannot be applied for via Email, please indicate that this field is not applicable (NA).
         • If data is not available, please indicate that there is no data (ND).
       fr: |
-        Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
-        Remarque : Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
+        Indique le nombre de demandes reçues au cours d'un exercice pour chacun des modes de prestation suivants.
+        Remarque : Si un service n'est pas offert au moyen d'un mode de prestation, veuillez indiquer que cette question est sans objet (NA). Si aucune donnée n'est disponible, veuillez indiquer qu'il n'y a aucune donnée (ND).
     obligation: Mandatory
     excel_required: true
     excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
@@ -651,8 +744,8 @@ resources:
         • If the service cannot be applied for via fax, please indicate that this field is not applicable (NA).
         • If data is not available, please indicate that there is no data (ND).
       fr: |
-        Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
-        Remarque : Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
+        Indique le nombre de demandes reçues au cours d'un exercice pour chacun des modes de prestation suivants.
+        Remarque : Si un service n'est pas offert au moyen d'un mode de prestation, veuillez indiquer que cette question est sans objet (NA). Si aucune donnée n'est disponible, veuillez indiquer qu'il n'y a aucune donnée (ND).
     obligation: Mandatory
     excel_required: true
     excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
@@ -674,8 +767,8 @@ resources:
         • If the service cannot be applied for via postal mail, please indicate that this field is not applicable (NA).
         • If data is not available, please indicate that there is no data (ND).
       fr: |
-        Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
-        Remarque : Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
+        Indique le nombre de demandes reçues au cours d'un exercice pour chacun des modes de prestation suivants.
+        Remarque : Si un service n'est pas offert au moyen d'un mode de prestation, veuillez indiquer que cette question est sans objet (NA). Si aucune donnée n'est disponible, veuillez indiquer qu'il n'y a aucune donnée (ND).
     obligation: Mandatory
     excel_required: true
     excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
@@ -684,232 +777,9 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 3.28
-  - datastore_id: e_registration
-    label:
-      en: "E-enabled Services: Account Registration/Enrollment"
-      fr: "Services électroniques : Enregistrement/ inscription du compte"
-    description:
-      en: |
-        Identifies whether a service is e-enabled based on key client interaction points, as applicable to the specific service. In the spirit of the Policy on Service’s principle of client centricity, an interaction point is e-enabled (“online”) if the user is able to pass through the interaction point without having to go out-of-band.
+  
 
-        Note: For more information on client interaction points, consult the Guideline on Service Management.
-      fr: |
-        Indique si un service est de nature électronique selon les principaux points d’interaction avec les clients et leur application à ce service en particulier.
-
-        Remarque : Pour plus de renseignements sur chaque point d’interaction, veuillez consulter la Ligne directrice sur la gestion de service.
-    obligation: Mandatory
-    excel_required: true
-    format_type: Controlled List
-    validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
-    excel_full_text_choices: true
-    choices:
-      Y:
-        en: "Yes (This interaction point is applicable to the service and is e-enabled)"
-        fr: "Oui (Ce point d’interaction s’applique au service et est de nature électronique)"
-      N:
-        en: "No (This interaction point is applicable to the service but is not currently e-enabled)"
-        fr: "Non (Ce point d’interaction s’applique au service, mais il n’est pas de nature électronique présentement)"
-      NA:
-        en: "N/A (This interaction point is not applicable to the service)"
-        fr: "S.O. (Ce point d’interaction s’applique au service et est de nature électronique)"
-
-  # 3.29
-  - datastore_id: e_authentication
-    label:
-      en: "E-enabled Services: Authentication"
-      fr: "Services électroniques : Authentification"
-    description:
-      en: |
-        Identifies whether a service is e-enabled based on key client interaction points, as applicable to the specific service. In the spirit of the Policy on Service’s principle of client centricity, an interaction point is e-enabled (“online”) if the user is able to pass through the interaction point without having to go out-of-band.
-
-        Note: For more information on client interaction points, consult the Guideline on Service Management.
-      fr: |
-        Indique si un service est de nature électronique selon les principaux points d’interaction avec les clients et leur application à ce service en particulier.
-
-        Remarque : Pour en savoir plus sur chaque point d’interaction, consultez la Ligne directrice sur la gestion des services.
-    obligation: Mandatory
-    excel_required: true
-    format_type: Controlled List
-    validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
-    excel_full_text_choices: true
-    choices:
-      Y:
-        en: "Yes (This interaction point is applicable to the service and is e-enabled)"
-        fr: "Oui (Ce point d’interaction s’applique au service et est de nature électronique)"
-      N:
-        en: "No (This interaction point is applicable to the service but is not currently e-enabled)"
-        fr: "Non (Ce point d’interaction s’applique au service, mais il n’est pas de nature électronique présentement)"
-      NA:
-        en: "N/A (This interaction point is not applicable to the service)"
-        fr: "S.O. (Ce point d’interaction s’applique au service et est de nature électronique)"
-
-  # 3.30
-  - datastore_id: e_application
-    label:
-      en: "E-enabled Services: Application"
-      fr: "Services offerts par voie électronique : Demande"
-    description:
-      en: |
-        Identifies whether a service is e-enabled based on key client interaction points, as applicable to the specific service. In the spirit of the Policy on Service’s principle of client centricity, an interaction point is e-enabled (“online”) if the user is able to pass through the interaction point without having to go out-of-band.
-
-        Note: For more information on client interaction points, consult the Guideline on Service Management.
-      fr: |
-        Indique si un service est de nature électronique selon les principaux points d’interaction avec les clients et leur application à ce service en particulier.
-
-        Remarque : Pour en savoir plus sur chaque point d’interaction, consultez la Ligne directrice sur la gestion des services.
-    obligation: Mandatory
-    excel_required: true
-    format_type: Controlled List
-    validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
-    excel_full_text_choices: true
-    choices:
-      Y:
-        en: "Yes (This interaction point is applicable to the service and is e-enabled)"
-        fr: "Oui (Ce point d’interaction s’applique au service et est de nature électronique)"
-      N:
-        en: "No (This interaction point is applicable to the service but is not currently e-enabled)"
-        fr: "Non (Ce point d’interaction s’applique au service, mais il n’est pas de nature électronique présentement)"
-      NA:
-        en: "N/A (This interaction point is not applicable to the service)"
-        fr: "S.O. (Ce point d’interaction s’applique au service et est de nature électronique)"
-
-  # 3.31
-  - datastore_id: e_decision
-    label:
-      en: "E-enabled Services: Decision"
-      fr: "Services offerts par voie électronique : Décision"
-    description:
-      en: |
-        Identifies whether a service is e-enabled based on key client interaction points, as applicable to the specific service. In the spirit of the Policy on Service’s principle of client centricity, an interaction point is e-enabled (“online”) if the user is able to pass through the interaction point without having to go out-of-band.
-
-        Note: For more information on client interaction points, consult the Guideline on Service Management.
-      fr: |
-        Indique si un service est de nature électronique selon les principaux points d’interaction avec les clients et leur application à ce service en particulier.
-
-        Remarque : Pour en savoir plus sur chaque point d’interaction, consultez la Ligne directrice sur la gestion des services.
-    obligation: Mandatory
-    excel_required: true
-    format_type: Controlled List
-    validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
-    excel_full_text_choices: true
-    choices:
-      Y:
-        en: "Yes (This interaction point is applicable to the service and is e-enabled)"
-        fr: "Oui (Ce point d’interaction s’applique au service et est de nature électronique)"
-      N:
-        en: "No (This interaction point is applicable to the service but is not currently e-enabled)"
-        fr: "Non (Ce point d’interaction s’applique au service, mais il n’est pas de nature électronique présentement)"
-      NA:
-        en: "N/A (This interaction point is not applicable to the service)"
-        fr: "S.O. (Ce point d’interaction s’applique au service et est de nature électronique)"
-
-  # 3.32
-  - datastore_id: e_issuance
-    label:
-      en: "E-enabled Services: Issuance"
-      fr: "Services électroniques : Délivrance"
-    description:
-      en: |
-        Identifies whether a service is e-enabled based on key client interaction points, as applicable to the specific service. In the spirit of the Policy on Service’s principle of client centricity, an interaction point is e-enabled (“online”) if the user is able to pass through the interaction point without having to go out-of-band.
-
-        Note: For more information on client interaction points, consult the Guideline on Service Management.
-      fr: |
-        Indique si un service est de nature électronique selon les principaux points d’interaction avec les clients et leur application à ce service en particulier.
-
-        Remarque : Pour en savoir plus sur chaque point d’interaction, consultez la Ligne directrice sur la gestion des services.
-    obligation: Mandatory
-    excel_required: true
-    format_type: Controlled List
-    validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
-    excel_full_text_choices: true
-    choices:
-      Y:
-        en: "Yes (This interaction point is applicable to the service and is e-enabled)"
-        fr: "Oui (Ce point d’interaction s’applique au service et est de nature électronique)"
-      N:
-        en: "No (This interaction point is applicable to the service but is not currently e-enabled)"
-        fr: "Non (Ce point d’interaction s’applique au service, mais il n’est pas de nature électronique présentement)"
-      NA:
-        en: "N/A (This interaction point is not applicable to the service)"
-        fr: "S.O. (Ce point d’interaction s’applique au service et est de nature électronique)"
-
-  # 3.33
-  - datastore_id: e_feedback
-    label:
-      en: "E-enabled Services: Issue Resolution and Feedback"
-      fr: "Services électroniques : Solution de problème et rétroaction"
-    description:
-      en: |
-        Identifies whether a service is e-enabled based on key client interaction points, as applicable to the specific service. In the spirit of the Policy on Service’s principle of client centricity, an interaction point is e-enabled (“online”) if the user is able to pass through the interaction point without having to go out-of-band.
-
-        Note: For more information on client interaction points, consult the Guideline on Service Management.
-      fr: |
-        Indique si un service est de nature électronique selon les principaux points d’interaction avec les clients et leur application à ce service en particulier.
-
-        Remarque : Pour en savoir plus sur chaque point d’interaction, consultez la Ligne directrice sur la gestion des services.
-    obligation: Mandatory
-    excel_required: true
-    format_type: Controlled List
-    validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
-    excel_full_text_choices: true
-    choices:
-      Y:
-        en: "Yes (This interaction point is applicable to the service and is e-enabled)"
-        fr: "Oui (Ce point d’interaction s’applique au service et est de nature électronique)"
-      N:
-        en: "No (This interaction point is applicable to the service but is not currently e-enabled)"
-        fr: "Non (Ce point d’interaction s’applique au service, mais il n’est pas de nature électronique présentement)"
-      NA:
-        en: "N/A (This interaction point is not applicable to the service)"
-        fr: "S.O. (Ce point d’interaction s’applique au service et est de nature électronique)"
-
-  # 3.34
-  - datastore_id: client_feedback
-    label:
-      en: "Client Given Opportunity to Provide Feedback on Level of Satisfaction with this Service by Channel"
-      fr: "Les clients ont l’occasion de donner une rétroaction sur le niveau de satisfaction de ce service, par canal"
-    description:
-      en: "Identifies which channels, if any, provide users of a service an opportunity to provide feedback on their level of satisfaction with the service. Select all that apply."
-      fr: "Détermine quels canaux, s’il y a lieu, offrent aux utilisateurs d’un service l’occasion de donner une rétroaction sur leur niveau de satisfaction à l’égard du service."
-    format_type: Controlled List
-    occurrence: Multiple
-    datastore_type: _text
-    choices:
-      ONL:
-        en: Online
-        fr: En ligne
-      TEL:
-        en: Telephone
-        fr: Téléphone
-      IP:
-        en: In-Person
-        fr: En personne
-      EML:
-        en: Email
-        fr: Courriel
-      FAX:
-        en: Fax
-        fr: Télécopieur
-      POST:
-        en: Postal Mail
-        fr: Courrier postal
-      NONE:
-        en: None
-        fr: Aucune des réponses
-
+  
   # 3.35 (new field)
   - datastore_id: special_remarks_en
     label:
@@ -917,7 +787,7 @@ resources:
       fr: Remarques spéciales (anglais)
     description:
       en: "Provides additional space for comments related to volumetrics information. Please refer to associated Field ID, where applicable. For comments related to other fields, departments can create and publish an explanatory note on their website with a link to the GC Service Inventory dataset."
-      fr: "Fournit de l’espace supplémentaire pour les commentaires relatifs aux renseignements sur les volumes. Veuillez vous reporter au code d’identification de la zone, s’il y a lieu. Pour les commentaires relatifs à d’autres zones, les ministères peuvent publier une note explicative sur leur site Web suivi d’un lien vers l’ensemble de données du Répertoire des services du GC."
+      fr: "Fournit de l'espace supplémentaire pour les commentaires relatifs aux renseignements sur les volumes. Veuillez vous reporter au code d'identification de la zone, s'il y a lieu. Pour les commentaires relatifs à d'autres zones, les ministères peuvent publier une note explicative sur leur site Web suivi d'un lien vers l'ensemble de données du Répertoire des services du GC."
     obligation: Optional
     format_type: Free text
     occurrence: Single
@@ -930,46 +800,7 @@ resources:
       fr: Remarques spéciales (français)
     description:
       en: "Provides additional space for comments related to volumetrics information. Please refer to associated Field ID, where applicable. For comments related to other fields, departments can create and publish an explanatory note on their website with a link to the GC Service Inventory dataset."
-      fr: "Fournit de l’espace supplémentaire pour les commentaires relatifs aux renseignements sur les volumes. Veuillez vous reporter au code d’identification de la zone, s’il y a lieu. Pour les commentaires relatifs à d’autres zones, les ministères peuvent publier une note explicative sur leur site Web suivi d’un lien vers l’ensemble de données du Répertoire des services du GC."
-    obligation: Optional
-    format_type: Free text
-    occurrence: Single
-    datastore_type: text
-
-# 3.37 (new field)
-  - datastore_id: harmonized_service_id
-    label:
-      en: Harmonized Service ID
-      fr: Désignation du service harmonisé
-    description:
-      en: "This service ID was created to match up unique services over multiple years, and create a standard format amoung all services in the inventory. This links services to their service standards."
-      fr: "Celle désignation du service a été créé pour faire correspondre dues services uniques sur plusieurs années et créer un format standard pour tous les services de l'inventaire. Cela relie les services à leurs norms relatives aux services."
-    obligation: Optional
-    format_type: Free text
-    occurrence: Single
-    datastore_type: text
-
-# 3.38 (new field)
-  - datastore_id: harmonized_service_name_en
-    label:
-      en: Harmonized Service Name (english)
-      fr: nom_du_service_harmonisé (anglais)
-    description:
-      en: "A new column with an edited service name was created to provide consistent service names over both years; by default using their newest name. This was necessary because a minority of services changed names slightly year over year."
-      fr: "Une nouvelle colonne avec un nom de service édité a été créée pour fournir des noms de service cohérents pour les deux années; par défaut en utilisant leur nom le plus récent. Cela était nécessaire car une minorité de services a changeé de nom légèrement d'une année à l'autre."
-    obligation: Optional
-    format_type: Free text
-    occurrence: Single
-    datastore_type: text
-
-# 3.39 (new field)
-  - datastore_id: harmonized_service_name_fr
-    label:
-      en: Harmonized Service Name (french)
-      fr: nom_du_service_harmonisé (français)
-    description:
-      en: "A new column with an edited service name was created to provide consistent service names over both years; by default using their newest name. This was necessary because a minority of services changed names slightly year over year."
-      fr: "Une nouvelle colonne avec un nom de service édité a été créée pour fournir des noms de service cohérents pour les deux années; par défaut en utilisant leur nom le plus récent. Cela était nécessaire car une minorité de services a changeé de nom légèrement d'une année à l'autre."
+      fr: "Fournit de l'espace supplémentaire pour les commentaires relatifs aux renseignements sur les volumes. Veuillez vous reporter au code d'identification de la zone, s'il y a lieu. Pour les commentaires relatifs à d'autres zones, les ministères peuvent publier une note explicative sur leur site Web suivi d'un lien vers l'ensemble de données du Répertoire des services du GC."
     obligation: Optional
     format_type: Free text
     occurrence: Single
@@ -1113,7 +944,7 @@ resources:
       e_feedback: Y
       client_feedback: [ONL, POST]
       special_remarks_en: 'The value for in-person applications is "NA" as applications are not submitted in-person. The values for some channels are listed as “ND” as the department does not have data available. '
-      special_remarks_fr: 'Les application_en_personne est sans object ("NA") parce que le service n’est pas offert en personne. Aucune donnée n’est disponible pour plusieurs canals'
+      special_remarks_fr: 'Les application_en_personne est sans object ("NA") parce que le service n'est pas offert en personne. Aucune donnée n'est disponible pour plusieurs canals'
       harmonized_service_id: 'aafc-aac-01'
       harmonized_service_name_en: 'Farm Debt Mediation Service'
       harmonized_service_name_fr: "Service de médiation en matière d'endettement agricole"
@@ -1135,7 +966,7 @@ resources:
       fr: Année financière
     description:
       en: Identifies the fiscal year for which service data is reported
-      fr: Indique l’exercice pour lequel les données sur les services sont déclarées.
+      fr: Indique l'exercice pour lequel les données sur les services sont déclarées.
     obligation: Mandatory
     excel_required: true
     validation: This field must not be empty
@@ -1149,7 +980,7 @@ resources:
       fr: Numéro d'identification du service
     description:
       en: The unique number assigned by the department to a service in the inventory to make it easier to refer to specific services.
-      fr: Le numéro unique attribué par le ministère ou l’organisme à un service dans le répertoire afin de faciliter le référencement à des services précis. (p. ex. 1, 2, etc.)
+      fr: Le numéro unique attribué par le ministère ou l'organisme à un service dans le répertoire afin de faciliter le référencement à des services précis. (p. ex. 1, 2, etc.)
     obligation: Mandatory
     excel_required: true
     format_type: Free text
@@ -1161,7 +992,7 @@ resources:
   - datastore_id: service_std_id
     label:
       en: Service Standard ID
-      fr: Code d’identification de la norme relative aux services
+      fr: Code d'identification de la norme relative aux services
     description:
       en: Identifies the unique number assigned by the department to each service standard for that service. Makes it easier for reference purposes as one service may have multiple standards.
       fr: Indique le numéro unique attribué par le ministère à chaque norme relative aux services pour ce service. Facilite le référencement, car un service peut avoir de multiples normes.
@@ -1249,7 +1080,7 @@ resources:
     choices:
       TML:
         en: Timeliness
-        fr: Accès à l’information
+        fr: Accès à l'information
       ACY:
         en: Accuracy
         fr: Temps opportun
@@ -1278,11 +1109,11 @@ resources:
   - datastore_id: gcss_tool_fiscal_yr
     label:
       en: Last Service Standard Review Using GC Service Standard Assessment Tool
-      fr: Dernier examen de la norme relative aux services à l’aide de l’outil d’évaluation des normes relatives aux services du GC
+      fr: Dernier examen de la norme relative aux services à l'aide de l'outil d'évaluation des normes relatives aux services du GC
     description:
       en: "Identifies the fiscal year in which the service standard was last reviewed using the GC Service Standard Assessment Tool available on the GC Service Policy GCPedia page. ( http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance )"
-      fr: "Indique l’exercice au cours duquel la norme relative aux services a été examinée
-pour la dernière fois à l’aide de l’outil d’évaluation des normes relatives aux
+      fr: "Indique l'exercice au cours duquel la norme relative aux services a été examinée
+pour la dernière fois à l'aide de l'outil d'évaluation des normes relatives aux
 services du GC accessible sur la page GCpédia de la Politique sur les services du
 GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
     obligation: Mandatory
@@ -1300,7 +1131,7 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
     description:
       en: "Identifies the departmental webpage where the real-time performance results for a service are published.
     • If data is not available, please indicate that there is no data (“ND”)."
-      fr: "Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (« ND »)."
+      fr: "Si aucune donnée n'est disponible, veuillez indiquer qu'il n'y a aucune donnée (« ND »)."
     obligation: Mandatory
     excel_required: true
     format_type: Free text
@@ -1317,7 +1148,7 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
       en: |
         Identifies the departmental webpage where the real-time performance results for a service are published.
         • If data is not available, please indicate that there is no data (“ND”).
-      fr: "Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (« ND »)."
+      fr: "Si aucune donnée n'est disponible, veuillez indiquer qu'il n'y a aucune donnée (« ND »)."
     obligation: Mandatory
     excel_required: true
     format_type: Free text
@@ -1329,14 +1160,14 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
   - datastore_id: q1_performance_result
     label:
       en: Q1 Business Volume That Met Service Standard Target
-      fr: Q1 Volume d’activités qui respectent la cible de la norme relative aux services
+      fr: Q1 Volume d'activités qui respectent la cible de la norme relative aux services
     description:
       en: |
         Identifies the number of final outputs issued appropriate to the service (eg. payments issued, requests completed, etc) during the first quarter of the fiscal year that met a particular service standard target for a service. (Q1: April 1- June 30)
         • If data is not available, please indicate that there is no data (“ND”).
       fr: |
-        Indique le nombre d’opérations de service effectuées (p. ex. les appels auxquels on a répondu, les paiements émis, les demandes traitées, etc.) au cours du premier trimestre de l’exercice qui ont respecté une norme relative aux services particulière à un service. (Q1 : du 1er avril au 30 juin)
-        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (« ND »).
+        Indique le nombre d'opérations de service effectuées (p. ex. les appels auxquels on a répondu, les paiements émis, les demandes traitées, etc.) au cours du premier trimestre de l'exercice qui ont respecté une norme relative aux services particulière à un service. (Q1 : du 1er avril au 30 juin)
+        • Si aucune donnée n'est disponible, veuillez indiquer qu'il n'y a aucune donnée (« ND »).
     obligation: Mandatory
     excel_required: true
     format_type: Numeric or ND
@@ -1354,8 +1185,8 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
         Identifies the total number of final outputs issued appropriate to the service (eg. payments issued, requests completed, etc) during the first quarter of the fiscal year. (Q1: April 1- June 30)
         • If data is not available, please indicate that there is no data (ND).
       fr: |
-        Indique le nombre total d’opérations de service effectuées (p. ex. les appels auxquels on a répondu, les paiements émis, les demandes traitées) relativement à un service au cours du premier trimestre de l’exercice. (Q1 : du 1er avril au 30 juin)
-        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (« ND »).
+        Indique le nombre total d'opérations de service effectuées (p. ex. les appels auxquels on a répondu, les paiements émis, les demandes traitées) relativement à un service au cours du premier trimestre de l'exercice. (Q1 : du 1er avril au 30 juin)
+        • Si aucune donnée n'est disponible, veuillez indiquer qu'il n'y a aucune donnée (« ND »).
     obligation: Mandatory
     excel_required: true
     format_type: Numeric or ND
@@ -1367,14 +1198,14 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
   - datastore_id: q2_performance_result
     label:
       en: Q2 Business Volume That Met Service Standard Target
-      fr: Q2 Volume d’activités qui respectent la cible de la norme relative aux services
+      fr: Q2 Volume d'activités qui respectent la cible de la norme relative aux services
     description:
       en: |
         Identifies the number of final outputs issued appropriate to the service (eg. payments issued, requests completed, etc) processed during the second quarter of the fiscal year that met a particular service standard target for a service. (Q2: July 1 – September 30)
         • If data is not available, please indicate that there is no data (ND).
       fr: |
-        Indique le nombre d’opérations de service effectuées (p. ex. les appels auxquels on a répondu, les paiements émis, les demandes traitées, etc.) au cours du premier trimestre de l’exercice qui ont respecté une norme relative aux services particulière à un service. (Q2 : 1er juillet au 30 septembre)
-        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (« ND »).
+        Indique le nombre d'opérations de service effectuées (p. ex. les appels auxquels on a répondu, les paiements émis, les demandes traitées, etc.) au cours du premier trimestre de l'exercice qui ont respecté une norme relative aux services particulière à un service. (Q2 : 1er juillet au 30 septembre)
+        • Si aucune donnée n'est disponible, veuillez indiquer qu'il n'y a aucune donnée (« ND »).
     obligation: Mandatory
     excel_required: true
     format_type: Numeric or ND
@@ -1392,8 +1223,8 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
         Identifies the total number of final outputs issued appropriate to the service (eg. payments issued, requests completed, etc) during the second quarter of the fiscal year. (Q2: July 1 – September 30)
         • If data is not available, please indicate that there is no data (ND).
       fr: |
-        Indique le nombre total d’opérations de service effectuées (p. ex. les appels auxquels on a répondu, les paiements émis, les demandes traitées) relativement à un service au cours du deuxième trimestre de l’exercice. (Q2 : 1er juillet au 30 septembre)
-        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (« ND »).
+        Indique le nombre total d'opérations de service effectuées (p. ex. les appels auxquels on a répondu, les paiements émis, les demandes traitées) relativement à un service au cours du deuxième trimestre de l'exercice. (Q2 : 1er juillet au 30 septembre)
+        • Si aucune donnée n'est disponible, veuillez indiquer qu'il n'y a aucune donnée (« ND »).
     obligation: Mandatory
     excel_required: true
     format_type: Numeric or ND
@@ -1405,14 +1236,14 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
   - datastore_id: q3_performance_result
     label:
       en: Q3 Business Volume That Met Service Standard Target
-      fr: Q3 Volume d’activités qui respectent la cible de la norme relative aux services
+      fr: Q3 Volume d'activités qui respectent la cible de la norme relative aux services
     description:
       en: |
         Identifies the number of final outputs issued appropriate to the service (eg. payments issued, requests completed, etc) during the third quarter of the fiscal year that met a particular service standard target for a service. (Q3: October 1 – December 31)
         • If data is not available, please indicate that there is no data (ND).
       fr: |
-        Indique le nombre d’opérations de service effectuées (p. ex. les appels auxquels on a répondu, les paiements émis, les demandes traitées, etc.) au cours du troisième trimestre de l’exercice qui ont respecté une norme relative aux services particulière à un service. (Q3 : du 1er octobre au 31 décembre)
-        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (« ND »).
+        Indique le nombre d'opérations de service effectuées (p. ex. les appels auxquels on a répondu, les paiements émis, les demandes traitées, etc.) au cours du troisième trimestre de l'exercice qui ont respecté une norme relative aux services particulière à un service. (Q3 : du 1er octobre au 31 décembre)
+        • Si aucune donnée n'est disponible, veuillez indiquer qu'il n'y a aucune donnée (« ND »).
     obligation: Mandatory
     excel_required: true
     format_type: Numeric or ND
@@ -1430,8 +1261,8 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
         Identifies the total number of final outputs issued appropriate to the service (eg. payments issued, requests completed, etc) during the third quarter of the fiscal year. (Q3: October 1 – December 31)
         • If data is not available, please indicate that there is no data (“ND”).
       fr: |
-        Indique le nombre total d’opérations de service effectuées (p. ex. les appels auxquels on a répondu, les paiements émis, les demandes traitées) relativement à un service au cours du troisième trimestre de l’exercice. (Q3: du 1er octobre au 31 décembre)
-        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (« ND »).
+        Indique le nombre total d'opérations de service effectuées (p. ex. les appels auxquels on a répondu, les paiements émis, les demandes traitées) relativement à un service au cours du troisième trimestre de l'exercice. (Q3: du 1er octobre au 31 décembre)
+        • Si aucune donnée n'est disponible, veuillez indiquer qu'il n'y a aucune donnée (« ND »).
     obligation: Mandatory
     excel_required: true
     format_type: Numeric or ND
@@ -1443,14 +1274,14 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
   - datastore_id: q4_performance_result
     label:
       en: Q4 Business Volume That Met Service Standard Target
-      fr: Q4 Volume d’activités qui respectent la cible de la norme relative aux services
+      fr: Q4 Volume d'activités qui respectent la cible de la norme relative aux services
     description:
       en: |
         Identifies the number of final outputs issued appropriate to the service (eg. payments issued, requests completed, etc) during the fourth quarter of the fiscal year that met a particular service standard target for a service. (Q4: January 1 – March 31)
         • If data is not available, please indicate that there is no data (“ND”).
       fr: |
-        Indique le nombre d’opérations de service effectuées (p. ex. les appels auxquels on a répondu, les paiements émis, les demandes traitées, etc.) au cours du quatrième trimestre de l’exercice qui ont respecté une norme relative aux services particulière à un service. (Q4: du 1er janvier au 31 mars)
-        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (« AD »).
+        Indique le nombre d'opérations de service effectuées (p. ex. les appels auxquels on a répondu, les paiements émis, les demandes traitées, etc.) au cours du quatrième trimestre de l'exercice qui ont respecté une norme relative aux services particulière à un service. (Q4: du 1er janvier au 31 mars)
+        • Si aucune donnée n'est disponible, veuillez indiquer qu'il n'y a aucune donnée (« AD »).
     obligation: Mandatory
     excel_required: true
     format_type: Numeric or ND
@@ -1465,11 +1296,11 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
       fr: Q4 Volumes des activités totaux
     description:
       en: |
-        Identifies the total number of final outputs issued appropriate to the service (eg. payments issued, requests completed, etc) during the fourth quarter of the fiscal year. (Q4: du 1er janvier au 31 mars)
+        Identifies the total number of final outputs issued appropriate to the service (eg. payments issued, requests completed, etc) during the fourth quarter of the fiscal year. (Q4: du 1er janvier au 31 mars)
         • If data is not available, please indicate that there is no data (ND).
       fr: |
-        Indique le nombre total d’opérations de service effectuées (p. ex. les appels auxquels on a répondu, les paiements émis, les demandes traitées) relativement à un service au cours du quatrième trimestre de l’exercice. (Q4: du 1er janvier au 31 mars)
-        Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (« ND »).
+        Indique le nombre total d'opérations de service effectuées (p. ex. les appels auxquels on a répondu, les paiements émis, les demandes traitées) relativement à un service au cours du quatrième trimestre de l'exercice. (Q4: du 1er janvier au 31 mars)
+        Si aucune donnée n'est disponible, veuillez indiquer qu'il n'y a aucune donnée (« ND »).
     obligation: Mandatory
     excel_required: true
     format_type: Numeric or ND
