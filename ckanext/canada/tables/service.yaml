@@ -5,7 +5,7 @@ title: Service Inventory
 notes: Access, upload and modify the Service Inventory of external and internal enterprise services for your organization
 
 template_version: 3
-template_updated: 2024-07-01
+template_updated: 2024-07-15
 
 portal_type: dataset
 collection: service
@@ -390,7 +390,7 @@ resources:
       0:
         en: "No (This interaction point is applicable to the service but is not currently online)"
         fr: "Non (Ce point d'interaction s'applique au service, mais il n'est pas de nature électronique présentement)"
-      -1: #GE: Can we do this?
+      -1:
         en: "N/A (This interaction point is not applicable to the service)"
         fr: "S.O. (Ce point d'interaction ne s'applique pas au service)"
 
@@ -416,7 +416,7 @@ resources:
       0:
         en: "No (This interaction point is applicable to the service but is not currently online)"
         fr: "Non (Ce point d'interaction s'applique au service, mais il n'est pas de nature électronique présentement)"
-      -1: #GE: Can we do this?
+      -1:
         en: "N/A (This interaction point is not applicable to the service)"
         fr: "S.O. (Ce point d'interaction ne s'applique pas au service)"
 
@@ -442,7 +442,7 @@ resources:
       0:
         en: "No (This interaction point is applicable to the service but is not currently online)"
         fr: "Non (Ce point d'interaction s'applique au service, mais il n'est pas de nature électronique présentement)"
-      -1: #GE: Can we do this?
+      -1:
         en: "N/A (This interaction point is not applicable to the service)"
         fr: "S.O. (Ce point d'interaction ne s'applique pas au service)"
 
@@ -468,7 +468,7 @@ resources:
       0:
         en: "No (This interaction point is applicable to the service but is not currently online)"
         fr: "Non (Ce point d'interaction s'applique au service, mais il n'est pas de nature électronique présentement)"
-      -1: #GE: Can we do this?
+      -1:
         en: "N/A (This interaction point is not applicable to the service)"
         fr: "S.O. (Ce point d'interaction ne s'applique pas au service)"
 
@@ -494,7 +494,7 @@ resources:
       0:
         en: "No (This interaction point is applicable to the service but is not currently online)"
         fr: "Non (Ce point d'interaction s'applique au service, mais il n'est pas de nature électronique présentement)"
-      -1: #GE: Can we do this?
+      -1:
         en: "N/A (This interaction point is not applicable to the service)"
         fr: "S.O. (Ce point d'interaction ne s'applique pas au service)"
 
@@ -520,19 +520,18 @@ resources:
       0:
         en: "No (This interaction point is applicable to the service but is not currently online)"
         fr: "Non (Ce point d'interaction s'applique au service, mais il n'est pas de nature électronique présentement)"
-      -1: #GE: Can we do this?
+      -1:
         en: "N/A (This interaction point is not applicable to the service)"
         fr: "S.O. (Ce point d'interaction ne s'applique pas au service)"
 
-#GE: I got this far 2024-07-08
 
   - datastore_id: online_comments_en
     label:
-      en: Comments on Online service interaction points (English)
-      fr: Commentaires sur les points d'intéraction en ligne (anglais)
+      en: Comments on Online Services - Client Interaction Points (English)
+      fr: Commentaires sur les services électroniques - points d'interaction avec les clients (anglais)
     description:
-      en: "Comments related to online services client Interaction points in English. For any interaction points reported as 'Not Applicable', comments have to be provided."
-      fr: "Commentaires en lien avec les points d'interaction avec les clients en ligne en anglais. Pour tout points d'interaction signalés comme 'sans objet', des commentaires doivent être fournis."
+      en: Comments related to online services - client Interaction points (English). For any interaction points reported as "Not Applicable", comments have to be provided.
+      fr: Commentaires en lien avec les services électroniques - points d'interaction avec les clients (anglais). Pour tout points d'interaction signalés comme « sans objet », des commentaires doivent être fournis.
     obligation: Optional
     format_type: Free text
     occurrence: Single
@@ -541,11 +540,11 @@ resources:
 
   - datastore_id: online_comments_fr
     label:
-      en: Comments on Online service interaction points (French)
-      fr: Commentaires sur les points d'intéraction en ligne (français)
+      en: Comments on Online Services - Client Interaction Points (French)
+      fr: Commentaires sur les services électroniques - points d'interaction avec les clients (français)
     description:
-      en: "Comments related to online services client Interaction points in French. For any interaction points reported as 'Not applicable', comments have to be provided."
-      fr: "Commentaires en lien avec les points d'interaction avec les clients en ligne en français. Pour tout points d'interaction signalés comme 'sans objet', des commentaires doivent être fournis."
+      en: Comments related to Online Services - Client Interaction Points (French). For any interaction points reported as "Not Applicable", comments have to be provided.
+      fr: Commentaires en lien avec les services électroniques - points d'interaction avec les clients (français). Pour tous les points d'interaction signalés comme « sans objet », des commentaires doivent être fournis.
     obligation: Optional
     format_type: Free text
     occurrence: Single
@@ -557,14 +556,14 @@ resources:
       en: Year of last service review
       fr: Année du dernier examen du service
     description:
-      en: Identifies the fiscal year when the most recent service review was completed
-      fr: Identifie l'exercice financier lors duquel le plus récent examen de service a été mené
+      en: Identifies the fiscal year when the most recent service review was completed.
+      fr: Identifie l’exercice lors duquel le plus récent examen de service a été mené
     obligation: Mandatory
     excel_required: true
     validation: This field must not be empty
     occurrence: Single
     datastore_type: text
-    choices_file: choices/fiscal_yr.yaml
+    choices_file: choices/fiscal_year.yaml
 
 
   - datastore_id: last_year_of_service_improvement_based_on_client_feedback
