@@ -25,8 +25,8 @@ resources:
     description:
       en: Identifies the fiscal year for which service data is reported
       fr: >
-      Indique l'exercice pour lequel les données sur les services sont 
-      déclarées.
+        Indique l'exercice pour lequel les données sur les services sont 
+        déclarées.
     datastore_type: year
     obligation: Mandatory
     validation: This field must not be empty
@@ -151,18 +151,10 @@ resources:
     description:
       en: >
         Identifies the service type as outlined in the Guideline on Service 
-        and Digital (Annex C.3.1, C.3.2., C.1.5), with the exception of High 
-        Volume Regulatory Transactions which is from the Policy on Regulatory 
-        and Accountability. The detailed types defined in the Guidelines have 
-        been grouped in this dataset to simplify reporting.
-      fr: >
-        Indique le type de service comme indiqué dans la Ligne directrice sur 
-        les services et le numérique (Annexe C.3.1. C.3.2, C.1.5), à 
-        l'exception des transactions réglementaires à demande élevée et des 
-        subventions et contributions, qui proviennent de la Politique sur la 
-        transparence et la responsabilisation en matière de réglementation. 
-        Ce répertoire groupe les catégories de la ligne directrice afin de 
-        simplifier les résultats.
+        and Digital.
+      fr: > 
+        Indique le type de service tel qu'indiqué dans la Ligne directrice sur 
+        les services et le numérique.
     datastore_type: text
     format_type: Controlled List
     obligation: Mandatory
@@ -237,37 +229,10 @@ resources:
       en: External Service or Internal Enterprise Service
       fr: Service externe ou service intégré interne
     description: #GE: this description is bad and long
-      en: >
-        Identifies the service as either an external service, internal 
-        enterprise service, internal service, or internal cluster service 
-        as defined in the Guideline on Service and Digital. External services
-        are those services provided to any individual or group of people 
-        outside of the government of Canada (e.g., Canadians, businesses, 
-        international clients). Internal services are groups of related 
-        activities and resources that the Government of Canada considers to be
-        services in support of programs or required to meet corporate 
-        obligations of an organization. An internal enterprise service can 
-        be defined as a service provided by a Government of Canada department
-        to other federal departments on a government-wide basis. Internal 
-        cluster are services that are shared amongst a limited number of 
-        departments, such as a portfolio or limited shared internal services.'
-      fr: >
-        Identifie le service en tant que service externe, service interne 
-        intégré, service interne, service interne intégré ou cluster interne 
-        au sens des définitions données dans la Ligne directrice sur les 
-        services et le numérique. Un service externe peut être défini comme 
-        un service dont le destinataire visé est un client à l'extérieur du 
-        gouvernement du Canada (par exemple, Canadiens, entreprises, clients 
-        internationaux). Les services internes désignent des groupes 
-        d'activités et de ressources connexes que le gouvernement fédéral 
-        considère comme des services à l'appui de programmes ou nécessaires 
-        pour satisfaire aux obligations générales d'une organisation. Un 
-        service interne intégré peut être défini comme un service offert 
-        par un ministère du gouvernement du Canada à d'autres ministères 
-        fédéraux à l'échelle de l'ensemble du gouvernement. Les clusters 
-        internes sont des services partagés entre un nombre limité de 
-        départements, comme un portefeuille ou des services internes 
-        partagés limités.
+      en: Indicates whether the service is external or internal to government.
+      fr: > #GE: translate this better
+        Indique si le service est offert aux clients externes ou internes 
+        au gouvernement 
     datastore_type: text
     format_type: Controlled List
     obligation: Mandatory
@@ -276,7 +241,7 @@ resources:
     excel_required: true
     occurrence: Multiple
     choices:
-      cluster: #GE: what is this
+      cluster: #GE: what even is this
         en: Internal Cluster Service
         fr: Service cluster interne
       enterprise:
@@ -294,14 +259,8 @@ resources:
       en: Client/Target Groups
       fr: Clients/groupes cibles
     description:
-      en: >
-        Identifies the clients or target groups of the service. For additional 
-        information on target groups, refer to the Directive on Results 
-        Appendix E Standard on Tagging
-      fr: >
-        Identifie les clients ou les groupes cibles du service. Pour de plus 
-        amples renseignements sur groupes cibles, veuillez consulter 
-        l'annexe E de la Directive sur les résultats, Norme sur le marquage.
+      en: Identifies the clients or target groups of the service.
+      fr: Identifie les clients ou les groupes de services cibles.
     datastore_type: text
     format_type: Controlled List
     obligation: Mandatory
@@ -338,8 +297,8 @@ resources:
         for all strategic outcomes, programs, sub-programs, and 
         sub-sub-programs. The Program codes in the government-wide Chart 
         of Accounts can be used. Corporate planners in the department/agency
-         who are responsible for the Policy on Results can assist in 
-         identifying this, if needed.
+        who are responsible for the Policy on Results can assist in 
+        identifying this, if needed.
       fr: >
         Indique le code de programme unique associé aux éléments de programme 
         pour tous les résultats stratégiques, les programmes, les 
@@ -498,7 +457,7 @@ resources:
       fr: 'Services en ligne: Authentification'
     description:
       en: 'Identifies whether a client can authenticate their identity online.'
-      fr: 'Indique si un client peut authentifier son identité en ligne. '
+      fr: Indique si un client peut confirmer son identité en ligne
     datastore_type: text
     format_type: Controlled List
     obligation: Mandatory
@@ -522,12 +481,8 @@ resources:
       en: 'Online Services: Application'
       fr: 'Services en ligne: Demande'
     description:
-      en: >
-        'Identifies whether a client can apply for a service online. This can be through filling a 
-        web form or electronically server to server, such as through an API. '
-      fr: >
-        'Indique si un client peut présenter une demande de service en ligne. Cela peut être en 
-        remplissant un formulaire Web ou directement entre serveurs, par exemple via une API. '
+      en: Identifies whether a client can apply for a service online
+      fr: Indique si un client peut présenter une demande de service en ligne
     datastore_type: text
     format_type: Controlled List
     obligation: Mandatory
@@ -552,8 +507,12 @@ resources:
       en: 'Online Services: Decision'
       fr: 'Services en ligne: Décision'
     description:
-      en: 'Identifies whether a client can be notified online of the outcome of their request for this service. '
-      fr: 'Indique si un client peut être informé en ligne du résultat de sa demande de ce service. '
+      en: > 
+        'Identifies whether a client can be notified online of the outcome of 
+        their request for this service. '
+      fr: > 
+        'Indique si un client peut être informé en ligne du résultat de sa 
+        demande de ce service. '
     datastore_type: text
     format_type: Controlled List
     obligation: Mandatory
@@ -577,8 +536,12 @@ resources:
       en: 'Online Services: Issuance'
       fr: 'Services en ligne: Émission'
     description:
-      en: 'Identifies whether a client can receive the service online, perhaps in the form of permits, certificates, money or information.'
-      fr: 'Indique si un client peut recevoir le service en ligne, peut-être sous forme de permis, de certificats, d'argent ou d'information.'
+      en: > 
+        'Identifies whether a client can receive the service online, perhaps 
+        in the form of permits, certificates, money or information.'
+      fr: > 
+        'Indique si un client peut recevoir le service en ligne, peut-être 
+        sous forme de permis, de certificats, d'argent ou d'information.'
     datastore_type: text
     format_type: Controlled List
     obligation: Mandatory
@@ -603,11 +566,11 @@ resources:
       fr: 'Services en ligne: Solution de problème et rétroaction'
     description:
       en: >
-        Identifies whether a client can seek resolution for their issues or provide feedback 
-        online. Either through their account or directly on a departmental web page.
+        Identifies whether a client can seek resolution to their issues or 
+        provide feedback online
       fr: > 
-        Indique si un client peut chercher à résoudre ses problèmes ou fournir des commentaires 
-        en ligne. Soit par l'intermédiaire de leur compte, soit directement sur une page Web du ministère.
+        Indique si un client peut demander une résolution à leur problèmes 
+        avec le service ou fournir de la rétroaction en ligne.
     datastore_type: text
     format_type: Controlled List
     obligation: Mandatory
