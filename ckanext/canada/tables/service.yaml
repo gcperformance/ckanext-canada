@@ -2,10 +2,12 @@ dataset_type: service
 target_dataset: service
 
 title: Service Inventory
-notes: Access, upload and modify the Service Inventory of external and internal enterprise services for your organization
+notes: >
+  Access, upload and modify the Service Inventory of external and internal 
+  enterprise services for your organization
 
 template_version: 3
-template_updated: 2024-07-15
+template_updated: 2024-07-23
 
 portal_type: dataset
 collection: service
@@ -22,7 +24,9 @@ resources:
       fr: Année financière
     description:
       en: Identifies the fiscal year for which service data is reported
-      fr: Indique l'exercice pour lequel les données sur les services sont déclarées.
+      fr: >
+      Indique l'exercice pour lequel les données sur les services sont 
+      déclarées.
     datastore_type: year
     obligation: Mandatory
     validation: This field must not be empty
@@ -35,8 +39,12 @@ resources:
       en: Service ID Number
       fr: Numéro d'identification du service
     description:
-      en: The unique number assigned to a service in the inventory to make it easier to refer to specific services.
-      fr: Le numéro unique attribué à un service dans le répertoire afin de faciliter le référencement à des services précis.
+      en: >
+        The unique number assigned to a service in the inventory to make it 
+        easier to refer to specific services.
+      fr: >
+        Le numéro unique attribué à un service dans le répertoire afin de 
+        faciliter le référencement à des services précis.
     datastore_type: text
     format_type: Free text
     obligation: Mandatory
@@ -142,14 +150,19 @@ resources:
       fr: Type de service
     description:
       en: >
-        Identifies the service type as outlined in the Guideline on Service and Digital (Annex C.3.1, C.3.2., C.1.5), 
-        with the exception of High Volume Regulatory Transactions which is from the Policy on Regulatory Transparency and Accountability. 
-        The detailed types defined in the Guidelines have been grouped in this dataset to simplify reporting.
+        Identifies the service type as outlined in the Guideline on Service 
+        and Digital (Annex C.3.1, C.3.2., C.1.5), with the exception of High 
+        Volume Regulatory Transactions which is from the Policy on Regulatory 
+        and Accountability. The detailed types defined in the Guidelines have 
+        been grouped in this dataset to simplify reporting.
       fr: >
-        Indique le type de service comme indiqué dans la Ligne directrice sur les services et le numérique (Annexe C.3.1. C.3.2, C.1.5), 
-        à l'exception des transactions réglementaires à demande élevée et des subventions et contributions, qui proviennent de la Politique 
-        sur la transparence et la responsabilisation en matière de réglementation. Ce répertoire groupe les catégories de la ligne 
-        directrice afin de simplifier les résultats.
+        Indique le type de service comme indiqué dans la Ligne directrice sur 
+        les services et le numérique (Annexe C.3.1. C.3.2, C.1.5), à 
+        l'exception des transactions réglementaires à demande élevée et des 
+        subventions et contributions, qui proviennent de la Politique sur la 
+        transparence et la responsabilisation en matière de réglementation. 
+        Ce répertoire groupe les catégories de la ligne directrice afin de 
+        simplifier les résultats.
     datastore_type: text
     format_type: Controlled List
     obligation: Mandatory
@@ -189,16 +202,21 @@ resources:
       fr: Type de bénéficiaire du service
     description: #GE: this description is bad
       en: >
-        'Targeted, Client-based Services - Service specific clients or groups, such as people, businesses, 
-        GC employees. Untargeted, Societal-based Service -Serve society, not distinct people or groups, 
-        such as military, pure science. Untargeted services only fill in static data, they do not fill 
-        in the service report.'
+        'Targeted, Client-based Services - Service specific clients or groups, 
+        such as people, businesses, GC employees. 
+        Untargeted, Societal-based Service -Serve society, not distinct 
+        people or groups, such as military, pure science. Untargeted 
+        services only fill in static data, they do not fill in the 
+        service report.'
       fr: >
-        'Services ciblés axés sur les clients - Répondent aux besoins de clients ou de groupes particuliers, 
-        par exemple les personnes, les entreprises ou les employés du GC. Services non ciblés axés sur la 
-        société -Répondent aux besoins de la société en général et non aux besoins de personnes ou de groupes 
-        distincts, par exemple les militaires ou la science pure. Les données sur les services non ciblés figurent 
-        uniquement dans les champs de données statiques et ne figurent pas dans le rapport des services.'
+        'Services ciblés axés sur les clients - Répondent aux besoins de 
+        clients ou de groupes particuliers, par exemple les personnes, 
+        les entreprises ou les employés du GC. Services non ciblés axés 
+        sur la société -Répondent aux besoins de la société en général 
+        et non aux besoins de personnes ou de groupes distincts, par exemple 
+        les militaires ou la science pure. Les données sur les services non 
+        ciblés figurent uniquement dans les champs de données statiques et 
+        ne figurent pas dans le rapport des services.'
     datastore_type: text
     format_type: Controlled List
     obligation: Mandatory
@@ -220,24 +238,36 @@ resources:
       fr: Service externe ou service intégré interne
     description: #GE: this description is bad and long
       en: >
-        Identifies the service as either an external service, internal enterprise service, internal service, or internal 
-        cluster service as defined in the Guideline on Service and Digital. External services are those services provided 
-        to any individual or group of people outside of the government of Canada (e.g., Canadians, businesses, international 
-        clients). Internal services are groups of related activities and resources that the Government of Canada considers 
-        to be services in support of programs or required to meet corporate obligations of an organization. An internal 
-        enterprise service can be defined as a service provided by a Government of Canada department to other federal departments 
-        on a government-wide basis. Internal cluster are services that are shared amongst a limited number of departments, 
-        such as a portfolio or limited shared internal services. '
+        Identifies the service as either an external service, internal 
+        enterprise service, internal service, or internal cluster service 
+        as defined in the Guideline on Service and Digital. External services
+        are those services provided to any individual or group of people 
+        outside of the government of Canada (e.g., Canadians, businesses, 
+        international clients). Internal services are groups of related 
+        activities and resources that the Government of Canada considers to be
+        services in support of programs or required to meet corporate 
+        obligations of an organization. An internal enterprise service can 
+        be defined as a service provided by a Government of Canada department
+        to other federal departments on a government-wide basis. Internal 
+        cluster are services that are shared amongst a limited number of 
+        departments, such as a portfolio or limited shared internal services.'
       fr: >
-        Identifie le service en tant que service externe, service interne intégré, service interne, service interne intégré ou 
-        cluster interne au sens des définitions données dans la Ligne directrice sur les services et le numérique. Un service 
-        externe peut être défini comme un service dont le destinataire visé est un client à l'extérieur du gouvernement du 
-        Canada (par exemple, Canadiens, entreprises, clients internationaux). Les services internes désignent des groupes 
-        d'activités et de ressources connexes que le gouvernement fédéral considère comme des services à l'appui de programmes 
-        ou nécessaires pour satisfaire aux obligations générales d'une organisation. Un service interne intégré peut être défini 
-        comme un service offert par un ministère du gouvernement du Canada à d'autres ministères fédéraux à l'échelle de l'ensemble 
-        du gouvernement. Les clusters internes sont des services partagés entre un nombre limité de départements, comme un 
-        portefeuille ou des services internes partagés limités.
+        Identifie le service en tant que service externe, service interne 
+        intégré, service interne, service interne intégré ou cluster interne 
+        au sens des définitions données dans la Ligne directrice sur les 
+        services et le numérique. Un service externe peut être défini comme 
+        un service dont le destinataire visé est un client à l'extérieur du 
+        gouvernement du Canada (par exemple, Canadiens, entreprises, clients 
+        internationaux). Les services internes désignent des groupes 
+        d'activités et de ressources connexes que le gouvernement fédéral 
+        considère comme des services à l'appui de programmes ou nécessaires 
+        pour satisfaire aux obligations générales d'une organisation. Un 
+        service interne intégré peut être défini comme un service offert 
+        par un ministère du gouvernement du Canada à d'autres ministères 
+        fédéraux à l'échelle de l'ensemble du gouvernement. Les clusters 
+        internes sont des services partagés entre un nombre limité de 
+        départements, comme un portefeuille ou des services internes 
+        partagés limités.
     datastore_type: text
     format_type: Controlled List
     obligation: Mandatory
@@ -265,11 +295,13 @@ resources:
       fr: Clients/groupes cibles
     description:
       en: >
-        Identifies the clients or target groups of the service. For additional information on target groups, refer to the 
-        Directive on Results Appendix E Standard on Tagging
+        Identifies the clients or target groups of the service. For additional 
+        information on target groups, refer to the Directive on Results 
+        Appendix E Standard on Tagging
       fr: >
-        Identifie les clients ou les groupes cibles du service. Pour de plus amples renseignements sur groupes cibles, 
-        veuillez consulter l'annexe E de la Directive sur les résultats, Norme sur le marquage.
+        Identifie les clients ou les groupes cibles du service. Pour de plus 
+        amples renseignements sur groupes cibles, veuillez consulter 
+        l'annexe E de la Directive sur les résultats, Norme sur le marquage.
     datastore_type: text
     format_type: Controlled List
     obligation: Mandatory
@@ -302,15 +334,19 @@ resources:
       fr: Code d'identification du programme
     description:
       en: >
-        Identifies the unique program code associated with program elements for all strategic outcomes, 
-        programs, sub-programs, and sub-sub-programs. The Program codes in the government-wide Chart of 
-        Accounts can be used. Corporate planners in the department/agency who are responsible for the 
-        Policy on Results can assist in identifying this, if needed.
+        Identifies the unique program code associated with program elements 
+        for all strategic outcomes, programs, sub-programs, and 
+        sub-sub-programs. The Program codes in the government-wide Chart 
+        of Accounts can be used. Corporate planners in the department/agency
+         who are responsible for the Policy on Results can assist in 
+         identifying this, if needed.
       fr: >
-        Indique le code de programme unique associé aux éléments de programme pour tous les résultats 
-        stratégiques, les programmes, les sous-programmes et les sous-sous-programmes. Les planificateurs 
-        ministériels du ministère ou de l'organisme responsables de la Politique sur les résultats peuvent 
-        aider à déterminer le code d'identification du programme, au besoin.
+        Indique le code de programme unique associé aux éléments de programme 
+        pour tous les résultats stratégiques, les programmes, les 
+        sous-programmes et les sous-sous-programmes. Les planificateurs 
+        ministériels du ministère ou de l'organisme responsables de la 
+        Politique sur les résultats peuvent aider à déterminer le code 
+        d'identification du programme, au besoin.
     datastore_type: text
     format_type: Free text #GE: can we define a mask, like postal code, to check validity, i.e. ABC00, otherwise we need to point to the code list from chart of accounts
     obligation: Optional
@@ -322,7 +358,9 @@ resources:
       en: Program Name (English)
       fr: Désignation du programme (en anglais)
     description:
-      en: Identifies the name of the program under which the service is delivered.
+      en: >
+        Identifies the name of the program under which the service is 
+        delivered.
       fr: Indique le nom du programme sous lequel le service est offert.
     datastore_type: text
     format_type: Free text
@@ -337,7 +375,9 @@ resources:
       en: Program Name (French)
       fr: Désignation du programme (en français)
     description:
-      en: Identifies the name of the program under which the service is delivered.
+      en: >
+        Identifies the name of the program under which the service is 
+        delivered.
       fr: Indique le nom du programme sous lequel le service est offert.
     datastore_type: text
     format_type: Free text
@@ -353,11 +393,13 @@ resources:
       fr: Commentaires des clients, par canal
     description:
       en: >
-        Identifies which channels, if any, provide users of a service an opportunity to provide feedback on 
-        their level of satisfaction with the service.
+        Identifies which channels, if any, provide users of a service an 
+        opportunity to provide feedback on their level of satisfaction with 
+        the service.
       fr: >
-        Détermine quels canaux, s'il y a lieu, offrent aux utilisateurs d'un service l'occasion de donner 
-        une rétroaction sur leur niveau de satisfaction à l'égard du service.
+        Détermine quels canaux, s'il y a lieu, offrent aux utilisateurs 
+        d'un service l'occasion de donner une rétroaction sur leur niveau de 
+        satisfaction à l'égard du service.
     datastore_type: text
     format_type: Controlled List
     obligation: Mandatory
@@ -395,8 +437,12 @@ resources:
       en: Service Fees
       fr: Frais de service
     description:
-      en: Identifies whether a service fee is collected for the provision of the service.
-      fr: Indique si des frais de service sont perçus pour la prestation du service.
+      en: >
+        Identifies whether a service fee is collected for the provision 
+        of the service.
+      fr: >
+        Indique si des frais de service sont perçus pour la prestation du 
+        service.
     datastore_type: boolean
     format_type: Controlled List
     obligation: Mandatory
@@ -418,13 +464,15 @@ resources:
       fr: 'Services en ligne: Enregistrement/inscription du compte'
     description:
       en: > 
-        Identifies whether a client can register or enroll for a personal account where they can make 
-        use of other interaction points (applying for services, providing information, seeing their 
+        Identifies whether a client can register or enroll for a personal 
+        account where they can make use of other interaction points (applying
+        for services, providing information, seeing their 
         status, submitting feedback, etc.).
       fr: >
-        Indique si un client peut s'inscrire ou s'inscrire à un compte personnel où il peut utiliser 
-        d'autres points d'interaction (demander des services, fournir des renseignements, voir son 
-        statut, soumettre des commentaires, etc.).
+        Indique si un client peut s'inscrire ou s'inscrire à un compte 
+        personnel où il peut utiliser d'autres points d'interaction 
+        (demander des services, fournir des renseignements, voir son statut, 
+        soumettre des commentaires, etc.).
     datastore_type: text
     format_type: Controlled List
     obligation: Mandatory
@@ -449,7 +497,7 @@ resources:
       en: 'Online Services: Authentication'
       fr: 'Services en ligne: Authentification'
     description:
-      en: 'Identifies whether a client can authenticate their identity online. '
+      en: 'Identifies whether a client can authenticate their identity online.'
       fr: 'Indique si un client peut authentifier son identité en ligne. '
     datastore_type: text
     format_type: Controlled List
@@ -581,15 +629,19 @@ resources:
   - datastore_id: online_comments_en
     label:
       en: Comments on Online Services - Client Interaction Points (English)
-      fr: Commentaires sur les services électroniques - points d'interaction avec les clients (anglais)
+      fr: >
+        Commentaires sur les services électroniques - points d'interaction avec
+        les clients (anglais)
     description:
       en: >
-        Comments related to online services - client Interaction points (English). For any 
-        interaction points reported as "Not Applicable", comments have to be provided.
+        Comments related to online services - client Interaction points 
+        (English). For any interaction points reported as "Not Applicable", 
+        comments have to be provided.
       fr: > 
-        Commentaires en lien avec les services électroniques - points d'interaction avec les 
-        clients (anglais). Pour tout points d'interaction signalés comme « sans objet », des 
-        commentaires doivent être fournis.
+        Commentaires en lien avec les services électroniques - points 
+        d'interaction avec les clients (anglais). Pour tout points 
+        d'interaction signalés comme « sans objet », des commentaires doivent 
+        être fournis.
     datastore_type: text
     format_type: Free text
     obligation: Optional
@@ -597,15 +649,19 @@ resources:
   - datastore_id: online_comments_fr
     label:
       en: Comments on Online Services - Client Interaction Points (French)
-      fr: Commentaires sur les services électroniques - points d'interaction avec les clients (français)
+      fr: > 
+        Commentaires sur les services électroniques - points d'interaction 
+        avec les clients (français)
     description:
-      en: > 
-        Comments related to Online Services - Client Interaction Points (French). For any 
-        interaction points reported as "Not Applicable", comments have to be provided.
-      fr: >
-        Commentaires en lien avec les services électroniques - points d'interaction avec 
-        les clients (français). Pour tous les points d'interaction signalés comme « sans objet », 
-        des commentaires doivent être fournis.
+      en: >
+        Comments related to online services - client Interaction points 
+        (French). For any interaction points reported as "Not Applicable", 
+        comments have to be provided.
+      fr: > 
+        Commentaires en lien avec les services électroniques - points 
+        d'interaction avec les clients (français). Pour tout points 
+        d'interaction signalés comme « sans objet », des commentaires doivent 
+        être fournis.
     datastore_type: text
     format_type: Free text
     obligation: Optional
@@ -615,8 +671,12 @@ resources:
       en: Year of last service review
       fr: Année du dernier examen de service
     description:
-      en: Identifies the fiscal year when the most recent service review was completed.
-      fr: Identifie l'exercice lors duquel le plus récent examen de service a été mené
+      en: > 
+        Identifies the fiscal year when the most recent service review was 
+        completed.
+      fr: > 
+        Identifie l'exercice lors duquel le plus récent examen de service a 
+        été mené
     datastore_type: year #GE: no format type?
     obligation: Mandatory
     validation: This field must not be empty
@@ -627,10 +687,16 @@ resources:
     datastore_id: last_year_of_service_improvement_based_on_client_feedback
     label:
       en: Year of last service improvement based on client feedback
-      fr: Année de la dernière amélioration du service sur la base de la rétroaction du client
+      fr: > 
+        Année de la dernière amélioration du service sur la base de la 
+        rétroaction du client
     description:
-      en: 'What was the most recent year in which this service was improved based on client feedback?'
-      fr: 'Quelle a été l'année la plus récente au cours de laquelle ce service a été amélioré en fonction des commentaires des clients? '
+      en: > 
+        'What was the most recent year in which this service was improved 
+        based on client feedback?'
+      fr: > 
+        'Quelle a été l'année la plus récente au cours de laquelle ce service 
+        a été amélioré en fonction des commentaires des clients?'
     datastore_type: year #GE: no format type?
     obligation: Mandatory
     validation: This field must not be empty
@@ -643,8 +709,14 @@ resources:
       en: Use of CRA Business Number
       fr: Utilisation du numéro d'entreprise de l'ARC
     description:
-      en: Identifies whether the Canada Revenue Agency's Business Number is used in the delivery of the service if the service is delivered to a business.
-      fr: Identifie si le numéro d'entreprise de l'Agence du Revenu du Canada est utilisé dans la prestation du service si le service est livré à une entreprise.
+      en: > 
+        Identifies whether the Canada Revenue Agency's Business Number is 
+        used in the delivery of the service if the service is delivered to a 
+        business.
+      fr: > 
+        Identifie si le numéro d'entreprise de l'Agence du Revenu du Canada 
+        est utilisé dans la prestation du service si le service est livré à 
+        une entreprise.
     datastore_type: numeric
     format_type: Controlled List
     obligation: Mandatory
@@ -668,8 +740,12 @@ resources:
       en: Use of Social Insurance Number
       fr: Utilisation du numéro d'assurance sociale (NAS)
     description:
-      en: Identifies whether the Social Insurance Number (SIN) is used in the delivery of the service.
-      fr: Indique si le numéro d'assurance sociale (NAS) est utilisé dans la prestation du service.
+      en: > 
+        Identifies whether the Social Insurance Number (SIN) is used in the 
+        delivery of the service.
+      fr: > 
+        Indique si le numéro d'assurance sociale (NAS) est utilisé dans la 
+        prestation du service.
     datastore_type: numeric
     format_type: Controlled List
     obligation: Mandatory
@@ -693,13 +769,23 @@ resources:
       en: Number of Telephone Enquiries Received
       fr: Nombre des demandes téléphoniques reçus
     description:
-      en: Identifies the number of telephone calls received for the service in a fiscal year.
-      fr: Indique le nombre de demandes reçues au cours d'un exercice pour chacun des modes de prestation suivants.
+      en: > 
+        Identifies the number of enquiries about the service received in this 
+        fiscal year. Note: This field represents only requests for information 
+        about the service. Report service requests or applications submitted 
+        by telephone in the "telephone applications" field
+      fr: > 
+        Indique le nombre de demandes d'information reçues par téléphone au 
+        cours d'un exercice financier. Remarque : Ce champ indique seulement 
+        le nombre de demandes d'information au sujet d'un service. Servez-vous 
+        du champ "telephone applications" pour les demandes de prestation de 
+        service reçues par téléphone.
     datastore_type: int #GE: if these can be NA or ND, I think these need to be text
     format_type: Numeric, NA or ND
     obligation: Mandatory
     validation: This field must not be empty
-    excel_error_formula: AND(NOT(ISNUMBER(VALUE({cell}))),{cell}<>"NA",{cell}<>"ND")
+    excel_error_formula: > 
+      AND(NOT(ISNUMBER(VALUE({cell}))),{cell}<>"NA",{cell}<>"ND")
     excel_required: true
 
   - datastore_id: telephone_applications
@@ -707,13 +793,18 @@ resources:
       en: Number of Applications Submitted by Telephone
       fr: Nombre de demandes soumises par téléphone
     description:
-      en: Identifies the number of applications submitted in a fiscal year for the telephone channel.
-      fr: Indique le nombre de demandes reçues au cours d'un exercice pour chacun des modes de prestation suivants.
+      en: > 
+        Identifies the number of applications submitted in a fiscal year for 
+        the telephone channel.
+      fr: > 
+        Indique le nombre de demandes reçues par téléphone au cours d'un 
+        exercice
     datastore_type: int #GE: if these can be NA or ND, I think these need to be text
     format_type: Numeric, NA or ND
     obligation: Mandatory
     validation: This field must not be empty
-    excel_error_formula: AND(NOT(ISNUMBER(VALUE({cell}))),{cell}<>"NA",{cell}<>"ND")
+    excel_error_formula: > 
+      AND(NOT(ISNUMBER(VALUE({cell}))),{cell}<>"NA",{cell}<>"ND")
     excel_required: true
 
   - datastore_id: web_visits
@@ -721,13 +812,18 @@ resources:
       en: Number of Website Visits
       fr: Nombre de visites sur le site Web
     description:
-      en: Identifies the number of website visits in a fiscal year.
-      fr: Indique le nombre de demandes reçues au cours d'un exercice.
+      en: > 
+        Identifies the number of visits to the service's website in a fiscal 
+        year
+      fr: > 
+        Indique le nombre de de visites au site web du service lors d'un 
+        exercice financier
     datastore_type: int #GE: if these can be NA or ND, I think these need to be text
     format_type: Numeric, NA or ND
     obligation: Mandatory
     validation: This field must not be empty
-    excel_error_formula: AND(NOT(ISNUMBER(VALUE({cell}))),{cell}<>"NA",{cell}<>"ND")
+    excel_error_formula: > 
+      AND(NOT(ISNUMBER(VALUE({cell}))),{cell}<>"NA",{cell}<>"ND")
     excel_required: true
 
   - datastore_id: online_applications
@@ -735,13 +831,16 @@ resources:
       en: Number of Applications Submitted Online
       fr: Nombre de demandes soumises en ligne
     description:
-      en: Identifies the number of applications submitted in a fiscal year for the online channel.
-      fr: Indique le nombre de demandes reçues au cours d'un exercice pour le mode de prestation en ligne
+      en: > 
+        Identifies the number of applications submitted in a fiscal year for 
+        the online channel
+      fr: Indique le nombre de demandes reçues en ligne au cours d'un exercice
     datastore_type: int #GE: if these can be NA or ND, I think these need to be text
     format_type: Numeric, NA or ND
     obligation: Mandatory
     validation: This field must not be empty
-    excel_error_formula: AND(NOT(ISNUMBER(VALUE({cell}))),{cell}<>"NA",{cell}<>"ND")
+    excel_error_formula: >
+      AND(NOT(ISNUMBER(VALUE({cell}))),{cell}<>"NA",{cell}<>"ND")
     excel_required: true
 
   - datastore_id: in_person_applications
@@ -749,13 +848,17 @@ resources:
       en: Number of Applications Submitted In-Person
       fr: Nombre de demandes soumises en personne
     description:
-      en: Identifies the number of applications received in-person in a fiscal year for the service.
-      fr: Indique le nombre de demandes reçues au cours d'un exercice pour chacun des modes de prestation suivants.
+      en: > 
+        Identifies number of applications received in-person in a fiscal year 
+        for the service
+      fr: > 
+        Indique le nombre de demandes reçues en personne au cours d'un exercice
     datastore_type: int #GE: if these can be NA or ND, I think these need to be text
     format_type: Numeric, NA or ND
     obligation: Mandatory
     validation: This field must not be empty
-    excel_error_formula: AND(NOT(ISNUMBER(VALUE({cell}))),{cell}<>"NA",{cell}<>"ND")
+    excel_error_formula: > 
+      AND(NOT(ISNUMBER(VALUE({cell}))),{cell}<>"NA",{cell}<>"ND")
     excel_required: true
 
   - datastore_id: postal_mail_applications
@@ -763,13 +866,17 @@ resources:
       en: Number of Applications Submitted via Postal Mail
       fr: Nombre de demandes soumises par la poste
     description:
-      en: Identifies the number of applications received through postal mail in a fiscal year for each service.
-      fr: Indique le nombre de demandes reçues au cours d'un exercice pour chacun des modes de prestation suivants.
+      en: > 
+        Identifies the number of applications received through postal mail in 
+        a fiscal year for the service
+      fr: > 
+      Indique le nombre de demandes reçues par la poste au cours d'un exercice
     datastore_type: int #GE: if these can be NA or ND, I think these need to be text
     format_type: Numeric, NA or ND
     obligation: Mandatory
     validation: This field must not be empty
-    excel_error_formula: AND(NOT(ISNUMBER(VALUE({cell}))),{cell}<>"NA",{cell}<>"ND")
+    excel_error_formula: > 
+      AND(NOT(ISNUMBER(VALUE({cell}))),{cell}<>"NA",{cell}<>"ND")
     excel_required: true
 
   - datastore_id: email_applications
@@ -777,13 +884,18 @@ resources:
       en: Number of Applications Submitted by Email
       fr: Nombre de demandes soumises par courriel
     description:
-      en: Identifies the number of applications submitted in a fiscal year for the email channel.
-      fr: Indique le nombre de demandes reçues au cours d'un exercice pour le mode de prestation par courriel
+      en: > 
+        Identifies the number of applications received through email in a 
+        fiscal year for the service
+      fr: > 
+        Indique le nombre de demandes reçues par courriel au cours d'un 
+        exercice
     datastore_type: int #GE: if these can be NA or ND, I think these need to be text
     format_type: Numeric, NA or ND
     obligation: Mandatory
     validation: This field must not be empty
-    excel_error_formula: AND(NOT(ISNUMBER(VALUE({cell}))),{cell}<>"NA",{cell}<>"ND")
+    excel_error_formula: > 
+      AND(NOT(ISNUMBER(VALUE({cell}))),{cell}<>"NA",{cell}<>"ND")
     excel_required: true
 
   - datastore_id: fax_applications
@@ -791,13 +903,18 @@ resources:
       en: Number of Applications Submitted by Fax
       fr: Nombre de demandes soumises par fax
     description:
-      en: Identifies the number of applications submitted in a fiscal year for the Fax channel.
-      fr: Indique le nombre de demandes reçues au cours d'un exercice pour le mode de prestation par fax
+      en: > 
+        Identifies the number of applications received through fax in a 
+        fiscal year for the service
+      fr: > 
+        Indique le nombre de demandes reçues par télécopieur au cours d'un
+        exercice
     datastore_type: int #GE: if these can be NA or ND, I think these need to be text
     format_type: Numeric, NA or ND
     obligation: Mandatory
     validation: This field must not be empty
-    excel_error_formula: AND(NOT(ISNUMBER(VALUE({cell}))),{cell}<>"NA",{cell}<>"ND")
+    excel_error_formula: > 
+      AND(NOT(ISNUMBER(VALUE({cell}))),{cell}<>"NA",{cell}<>"ND")
     excel_required: true
 
   - datastore_id: other_applications
@@ -806,18 +923,17 @@ resources:
       fr: Nombre de demandes soumises par les autre modes de prestations
     description:
       en: > 
-        Identifies the number of applications received through other channels in a fiscal year 
-        for each service. See comments in special_remarks_en and special_remarks_fr for details 
-        on other channels.
-      fr: >
-        Indique le nombre de demandes reçues au cours d'un exercice par d'autres modes de prestation. 
-        Consultez les commentaires dans special_remarks_en et special_remarks_fr pour plus de détails 
-        sur d'autres modes de prestation.
+        Identifies the number of applications received through other 
+        channels not listed in a fiscal year for the service
+      fr: > 
+        Indique le nombre de demandes reçues par des modes de prestations qui 
+        ne sont pas énumérés dans ce gabarit au cours d'un exercice
     datastore_type: int #GE: if these can be NA or ND, I think these need to be text
     format_type: Numeric, NA or ND
     obligation: Mandatory
     validation: This field must not be empty
-    excel_error_formula: AND(NOT(ISNUMBER(VALUE({cell}))),{cell}<>"NA",{cell}<>"ND")
+    excel_error_formula: > 
+    AND(NOT(ISNUMBER(VALUE({cell}))),{cell}<>"NA",{cell}<>"ND")
     excel_required: true
 
   - datastore_id: special_remarks_en
@@ -826,15 +942,18 @@ resources:
       fr: Remarques spéciales (anglais)
     description:
       en: > 
-        Provides additional space for comments related to volumetrics information. Please refer to 
-        associated Field ID, where applicable. For comments related to other fields, departments 
-        can create and publish an explanatory note on their website with a link to the GC Service 
-        Inventory dataset.
-      fr: >
-        Fournit de l'espace supplémentaire pour les commentaires relatifs aux renseignements sur les 
-        volumes. Veuillez vous reporter au code d'identification de la zone, s'il y a lieu. Pour les 
-        commentaires relatifs à d'autres zones, les ministères peuvent publier une note explicative 
-        sur leur site Web suivi d'un lien vers l'ensemble de données du Répertoire des services du GC.
+        Provides additional space for comments related to volumetrics 
+        information. Please refer to associated Field ID, where applicable. 
+        For comments related to other fields, departments can create and 
+        publish an explanatory note on their website with a link to the GC 
+        Service Inventory dataset.
+      fr: > 
+        Fournit de l'espace supplémentaire pour les commentaires relatifs 
+        aux renseignements sur les volumes. Veuillez vous reporter au code 
+        d'identification de la zone, s'il y a lieu. Pour les commentaires 
+        relatifs à d'autres zones, les ministères peuvent publier une note 
+        explicative sur leur site Web suivi d'un lien vers l'ensemble de 
+        données du Répertoire des services du GC.
     datastore_type: text
     format_type: Free text
     obligation: Optional
@@ -845,14 +964,18 @@ resources:
       fr: Remarques spéciales (français)
     description:
       en: > 
-        Provides additional space for comments related to volumetrics information. Please refer to associated 
-        Field ID, where applicable. For comments related to other fields, departments can create and publish an 
-        explanatory note on their website with a link to the GC Service Inventory dataset.
+        Provides additional space for comments related to volumetrics 
+        information. Please refer to associated Field ID, where applicable. 
+        For comments related to other fields, departments can create and 
+        publish an explanatory note on their website with a link to the GC 
+        Service Inventory dataset.
       fr: > 
-        Fournit de l'espace supplémentaire pour les commentaires relatifs aux renseignements sur les volumes. 
-        Veuillez vous reporter au code d'identification de la zone, s'il y a lieu. Pour les commentaires relatifs 
-        à d'autres zones, les ministères peuvent publier une note explicative sur leur site Web suivi d'un lien 
-        vers l'ensemble de données du Répertoire des services du GC.
+        Fournit de l'espace supplémentaire pour les commentaires relatifs 
+        aux renseignements sur les volumes. Veuillez vous reporter au code 
+        d'identification de la zone, s'il y a lieu. Pour les commentaires 
+        relatifs à d'autres zones, les ministères peuvent publier une note 
+        explicative sur leur site Web suivi d'un lien vers l'ensemble de 
+        données du Répertoire des services du GC.
     datastore_type: text
     format_type: Free text
     obligation: Optional
@@ -862,8 +985,12 @@ resources:
       en: URL to Service (English)
       fr: URL du service (anglais)
     description:
-      en: Identifies the departmental webpage where the service is described and/or accessed.
-      fr: Indique la page Web du ministère où le service est décrit et/ou peut être lancé.
+      en: > 
+        Identifies the departmental webpage where the service is described 
+        and/or accessed.
+      fr: > 
+        Indique la page Web du ministère où le service est décrit et/ou peut 
+        être lancé.
     datastore_type: text
     format_type: Free text
     obligation: Optional
@@ -873,8 +1000,12 @@ resources:
       en: URL to Service (French)
       fr: URL du service (français)
     description:
-      en: Identifies the departmental webpage where the service is described and/or accessed.
-      fr: Indique la page Web du ministère où le service est décrit et/ou peut être lancé.
+      en: > 
+        Identifies the departmental webpage where the service is described 
+        and/or accessed.
+      fr: > 
+        Indique la page Web du ministère où le service est décrit et/ou peut 
+        être lancé.
     datastore_type: text
     format_type: Free text
     obligation: Optional
@@ -882,9 +1013,14 @@ resources:
   - datastore_id: total_applications #GE: this is a calculated field, we should probably not include it as input
     datastore_type: int
     description:
-      en: Identifies the total number of applications submitted in a fiscal year for all application channels.
-      fr: 'Indique le nombre total de demandes reçues au cours d'un exercice pour tous les modes de prestation '
-    excel_error_formula: AND(NOT(ISNUMBER(VALUE({cell}))),{cell}<>"NA",{cell}<>"ND")
+      en: > 
+        Identifies the total number of applications submitted in a fiscal year 
+        for all application channels.
+      fr: >
+      Indique le nombre total de demandes reçues au cours d'un exercice 
+      pour tous les modes de prestation
+    excel_error_formula: > 
+      AND(NOT(ISNUMBER(VALUE({cell}))),{cell}<>"NA",{cell}<>"ND")
     excel_required: true
     format_type: Numeric, NA or ND
     label:
@@ -914,8 +1050,83 @@ resources:
     import_template_include: false
     visible_to_public: false
     preview_class: bg-info
+  
+  triggers:
+  - service_trigger: |
+      DECLARE
+        errors text[][] := '{{}}';
+        crval RECORD;
+      BEGIN
+        errors := errors || required_error(NEW.fiscal_yr, 'fiscal_yr');
+        errors := errors || choice_error(NEW.fiscal_yr, {fiscal_yr}, 'fiscal_yr');
+        errors := errors || required_error(NEW.service_id, 'service_id');
+        errors := errors || no_surrounding_whitespace_error(NEW.service_id, 'service_id');
+        errors := errors || required_error(NEW.service_name_en, 'service_name_en');
+        errors := errors || required_error(NEW.service_name_fr, 'service_name_fr');
+        errors := errors || required_error(NEW.external_internal, 'external_internal');
+        errors := errors || choice_error(NEW.external_internal, {external_internal}, 'external_internal');
+        errors := errors || required_error(NEW.service_type, 'service_type');
+        errors := errors || choice_error(NEW.service_type, {service_type}, 'service_type');
+        errors := errors || required_error(NEW.special_designations, 'special_designations');
+        errors := errors || choice_error(NEW.special_designations, {special_designations}, 'special_designations');
+        errors := errors || required_error(NEW.service_description_en, 'service_description_en');
+        errors := errors || required_error(NEW.service_description_fr, 'service_description_fr');
+        errors := errors || required_error(NEW.authority_en, 'authority_en');
+        errors := errors || required_error(NEW.authority_fr, 'authority_fr');
+        errors := errors || required_error(NEW.program_name_en, 'program_name_en');
+        errors := errors || required_error(NEW.program_name_fr, 'program_name_fr');
+        errors := errors || required_error(NEW.program_id_code, 'program_id_code');
+        errors := errors || required_error(NEW.client_target_groups, 'client_target_groups');
+        NEW.client_target_groups := choices_from(
+          NEW.client_target_groups, {client_target_groups}, 'client_target_groups');
+        errors := errors || required_error(NEW.cra_business_number, 'cra_business_number');
+        errors := errors || required_error(NEW.service_fee, 'service_fee');
+        errors := errors || choice_error(NEW.service_fee, {service_fee}, 'service_fee');
+        errors := errors || choice_error(NEW.cra_business_number, {cra_business_number}, 'cra_business_number');
+        errors := errors || required_error(NEW.online_applications, 'online_applications');
+        errors := errors || integer_or_na_nd_error(NEW.online_applications, 'online_applications');
+        errors := errors || required_error(NEW.calls_received, 'calls_received');
+        errors := errors || integer_or_na_nd_error(NEW.calls_received, 'calls_received');
+        errors := errors || required_error(NEW.in_person_applications, 'in_person_applications');
+        errors := errors || integer_or_na_nd_error(NEW.in_person_applications, 'in_person_applications');
+        errors := errors || required_error(NEW.postal_mail_applications, 'postal_mail_applications');
+        errors := errors || integer_or_na_nd_error(NEW.postal_mail_applications, 'postal_mail_applications');
+        errors := errors || required_error(NEW.e_registration, 'e_registration');
+        errors := errors || choice_error(NEW.e_registration, {e_registration}, 'e_registration');
+        errors := errors || required_error(NEW.e_authentication, 'e_authentication');
+        errors := errors || choice_error(NEW.e_authentication, {e_authentication}, 'e_authentication');
+        errors := errors || required_error(NEW.e_application, 'e_application');
+        errors := errors || choice_error(NEW.e_application, {e_application}, 'e_application');
+        errors := errors || required_error(NEW.e_decision, 'e_decision');
+        errors := errors || choice_error(NEW.e_decision, {e_decision}, 'e_decision');
+        errors := errors || required_error(NEW.e_issuance, 'e_issuance');
+        errors := errors || choice_error(NEW.e_issuance, {e_issuance}, 'e_issuance');
+        errors := errors || required_error(NEW.e_feedback, 'e_feedback');
+        errors := errors || choice_error(NEW.e_feedback, {e_feedback}, 'e_feedback');
 
+        IF NEW.fiscal_yr <> '2016-2017' THEN
+          errors := errors || required_error(NEW.service_url_en, 'service_url_en');
+          errors := errors || required_error(NEW.service_url_fr, 'service_url_fr');
+          errors := errors || required_error(NEW.use_of_sin, 'use_of_sin');
+          errors := errors || choice_error(NEW.use_of_sin, {use_of_sin}, 'use_of_sin');
+          errors := errors || required_error(NEW.web_visits_info_service, 'web_visits_info_service');
+          errors := errors || integer_or_na_nd_error(NEW.web_visits_info_service, 'web_visits_info_service');
+          errors := errors || required_error(NEW.email_applications, 'email_applications');
+          errors := errors || integer_or_na_nd_error(NEW.email_applications, 'email_applications');
+          errors := errors || required_error(NEW.fax_applications, 'fax_applications');
+          errors := errors || integer_or_na_nd_error(NEW.fax_applications, 'fax_applications');
+          errors := errors || required_error(NEW.client_feedback, 'client_feedback');
+          NEW.client_feedback := choices_from(
+            NEW.client_feedback, {client_feedback}, 'client_feedback');
+        END IF;
+        IF errors = '{{}}' THEN
+          RETURN NEW;
+        END IF;
+        RAISE EXCEPTION E'TAB-DELIMITED\t%', array_to_string(errors, E'\t');
+      END;
+  - update_record_modified_created_trigger
 
+ 
 # ====SERVICE STANDARDS====
 - resource_name: service_standards
   title: Service Standards & Performance Results
@@ -927,7 +1138,9 @@ resources:
       fr: Année financière
     description:
       en: Identifies the fiscal year for which service data is reported
-      fr: Indique l'exercice pour lequel les données sur les services sont déclarées.
+      fr: > 
+        Indique l'exercice pour lequel les données sur les services sont 
+        déclarées.
     datastore_type: year
     obligation: Mandatory
     validation: This field must not be empty
@@ -940,8 +1153,12 @@ resources:
       en: Service ID Number
       fr: Numéro d'identification du service
     description:
-      en: The unique number assigned to a service in the inventory to make it easier to refer to specific services.
-      fr: Le numéro unique attribué à un service dans le répertoire afin de faciliter le référencement à des services précis.
+      en: > 
+        The unique number assigned to a service in the inventory to make it 
+        easier to refer to specific services.
+      fr: > 
+        Le numéro unique attribué à un service dans le répertoire afin de 
+        faciliter le référencement à des services précis.
     datastore_type: text
     format_type: Free text
     obligation: Mandatory
@@ -985,8 +1202,14 @@ resources:
       en: Service Standard ID
       fr: Numéro d'identification de la norme relative aux services
     description:
-      en: Identifies the unique number assigned to each service standard for that service. Makes it easier for reference purposes as one service may have multiple standards.
-      fr: Indique le numéro unique attribué à chaque norme relative aux services pour ce service. Facilite le référencement, car un service peut avoir de multiples normes.
+      en: > 
+        Identifies the unique number assigned to each service standard 
+        for that service. Makes it easier for reference purposes as one 
+        service may have multiple standards.
+      fr: > 
+        Indique le numéro unique attribué à chaque norme relative aux services 
+        pour ce service. Facilite le référencement, car un service peut avoir 
+        de multiples normes.
     datastore_type: text
     format_type: Free text
     obligation: Mandatory
@@ -999,12 +1222,14 @@ resources:
       fr: Norme relative aux services (anglais)
     description:
       en: > 
-        Identifies the service standard related to a particular service. See Guideline on Service 
-        and Digital for format to be used when defining service standards.
+        Identifies the service standard related to a particular service. See 
+        Guideline on Service and Digital for format to be used when 
+        defining service standards.
       fr: > 
-        Indique la norme relative aux services ayant trait à un service en particulier. Voir la 
-        Ligne directrice sur les services et le numérique afin de connaître le format à utiliser 
-        pour définir les normes relatives aux services.
+        Indique la norme relative aux services ayant trait à un service en 
+        particulier. Voir la Ligne directrice sur les services et le numérique 
+        afin de connaître le format à utiliser pour définir les normes 
+        relatives aux services.
     datastore_type: text
     format_type: Free text
     obligation: Mandatory
@@ -1020,12 +1245,14 @@ resources:
       fr: Norme relative aux services (français)
     description:
       en: >
-        Identifies the service standard related to a particular service. See Guideline on Service and 
-        Digital for format to be used when defining service standards.
+        Identifies the service standard related to a particular service. See 
+        Guideline on Service and Digital for format to be used when defining 
+        service standards.
       fr: > 
-        Indique la norme relative aux services ayant trait à un service en particulier. Voir la Ligne 
-        directrice sur les services et le numérique afin de connaître le format à utiliser pour définir 
-        les normes relatives aux services.
+        Indique la norme relative aux services ayant trait à un service en 
+        particulier. Voir la Ligne directrice sur les services et le numérique 
+        afin de connaître le format à utiliser pour définir les normes 
+        relatives aux services.
     datastore_type: text
     format_type: Free text
     obligation: Mandatory
@@ -1041,18 +1268,22 @@ resources:
       fr: Type de norme relative aux services
     description:
       en: > 
-        'Identifies the type of service standard as defined in the Guideline on Service and Digital. 
-        Access: a commitment outlining the ease and convenience the client should experience when attempting 
-        to access a service. Accuracy: a commitment stipulating that the client will receive a service that is 
-        up to date, free of errors, and complete. Timeliness: a commitment stating how long the client should 
-        expect to wait to receive a service once the service has been accessed.'
+        'Identifies the type of service standard as defined in the Guideline 
+        on Service and Digital. Access: a commitment outlining the ease and 
+        convenience the client should experience when attempting to access a 
+        service. Accuracy: a commitment stipulating that the client will 
+        receive a service that is up to date, free of errors, and complete. 
+        Timeliness: a commitment stating how long the client should expect to 
+        wait to receive a service once the service has been accessed.'
       fr: >
-        "Indique le type de norme relative aux services défini dans la Ligne directrice sur les services et le 
-        numérique. Accès à l'information: un engagement qui décrit la facilité et la convivialité que devrait 
-        connaître le client lorsqu'il essaie d'accéder à un service.  Exactitude: un engagement qui stipule 
-        que le client recevra un service complet et à jour qui est exempt d'erreurs. Temps opportun:un engagement 
-        qui indique le temps d'attente que devrait connaître le client pour recevoir un service une fois qu'il y a 
-        accédé."
+        "Indique le type de norme relative aux services défini dans la Ligne 
+        directrice sur les services et le numérique. Accès à l'information: un 
+        engagement qui décrit la facilité et la convivialité que devrait 
+        connaître le client lorsqu'il essaie d'accéder à un service.  
+        Exactitude: un engagement qui stipule que le client recevra un service 
+        complet et à jour qui est exempt d'erreurs. Temps opportun:un 
+        engagement qui indique le temps d'attente que devrait connaître le 
+        client pour recevoir un service une fois qu'il y a accédé."
     datastore_type: text
     format_type: Controlled List
     obligation: Mandatory
@@ -1079,7 +1310,9 @@ resources:
       fr: Mode de prestation de la norme de service
     description:
       en: Identifies the service channel to which the service standard applies
-      fr: Identifie à quelle mode de prestation de service la norme de service estappliquée
+      fr: > 
+        Identifie à quelle mode de prestation de service la norme de service
+        s'applique
     datastore_type: text
     format_type: Controlled List
     obligation: Mandatory
@@ -1112,35 +1345,48 @@ resources:
   - datastore_id: standard_channel_comment_en
     label:
       en: Comments on the service standard channel (English)
-      fr: Commentaires sur le mode de prestation de la norme de service (anglais)
+      fr: > 
+        Commentaires sur le mode de prestation de la norme de service 
+        (anglais)
     description:
       en: > 
-        Comments related to the service standard channel and provides explanation of 
-        "Other" channel selection.
+        Comments related to the service standard channel and provides 
+        explanation of "Other" channel selection.
       fr: >
-        Commentaires en lien au mode de prestation de la norme de service et fournit une 
-        explication de la sélection des modes de prestation « Autre ».
+        Commentaires en lien au mode de prestation de la norme de service et 
+        fournit une explication de la sélection des modes de prestation 
+        « Autre ».
     datastore_type: text
     format_type: Free text
     obligation: Optional
     validation:
       en: This field can be empty or up to max 500 characters.
-      fr: Ce formulaire peut être vide ou contenir un maximum de 500 caractères.
+      fr: > 
+        Ce champ peut être vide ou contenir un maximum de 500 caractères.
     excel_error_formula: 'OR({default_formula},ISBLANK({cell}),{cell}<500)'
 
   - datastore_id: standard_channel_comment_fr
     label:
       en: Comments on the service standard channel (French)
-      fr: Commentaires sur le mode de prestation de la norme de service (Francais)
+      fr: > 
+        Commentaires sur le mode de prestation de la norme de service 
+        (Francais)
     description:
-      en: Comments related to the service standard channel and provides explanation of "Other" channel  selection.
-      fr: Commentaires en lien au mode de prestation de la norme de service et fournit une explication de la sélection des modes de prestation « Autre ».
+      en: > 
+        Comments related to the service standard channel and provides 
+        explanation of "Other" channel  selection.
+      fr: > 
+        Commentaires en lien au mode de prestation de la norme de service et 
+        fournit une explication de la sélection des modes de prestation 
+        « Autre ».
     datastore_type: text
     format_type: Free text
     obligation: Optional
     validation:
       en: This field can be empty or up to max 500 characters.
-      fr: Ce formulaire peut être vide ou contenir un maximum de 500 caractères.
+      fr: > 
+        Ce formulaire peut être vide ou contenir un maximum de 500 
+        caractères.
     excel_error_formula: 'OR({default_formula},ISBLANK({cell}),{cell}<500)'
 
   - datastore_id: target_type
@@ -1169,30 +1415,38 @@ resources:
       en: Service Standard Target
       fr: Cible de la norme relative aux services
     description:
-      en: The frequency that the organization expects to meet service standard (reported as a percentage).
-      fr: Fréquence à laquelle l'organisation s'attend à respecter sa norme de service (exprimée en pourcentage).
+      en: > 
+        The frequency that the organization expects to meet service standard 
+        (reported as a percentage).
+      fr: > 
+        Fréquence à laquelle l'organisation s'attend à respecter sa norme de 
+        service (exprimée en pourcentage).
     datastore_type: numeric
     format_type: Decimal
     obligation: Optional
     validation:
-      en: This value must be between 0 and 100
-      fr: This value must be between 0 and 100
-    excel_error_formula: OR({default_formula},{cell}<0,{cell}>100)
+      en: This value must be between 0 and 1
+      fr: This value must be between 0 and 1
+    excel_error_formula: OR({default_formula},{cell}<0,{cell}>1)
     
 
   - datastore_id: volume_meeting_target
     label:
       en: Business Volume That Met Service Standard Target
-      fr: Volume d'activités qui respectent la cible de la norme relative aux services
+      fr: > 
+        Volume d'activités qui respectent la cible de la norme relative aux 
+        services
     description:
       en: > 
-        Identifies the number of final outputs issued appropriate to the service (eg. payments issued, 
-        requests completed, etc) during the fiscal year that met a particular service standard target 
-        for a service.
+        Identifies the number of final outputs issued appropriate to the 
+        service (eg. payments issued, requests completed, etc) during the 
+        fiscal year that met a particular service standard target for a 
+        service.
       fr: > 
-        Indique le nombre d'opérations de service effectuées (p. ex. les appels auxquels on a répondu, 
-        les paiements émis, les demandes traitées, etc.) au cours de l'exercice qui ont respecté une 
-        norme relative aux services particulière à un service.
+        Indique le nombre d'opérations de service effectuées (p. ex. les 
+        appels auxquels on a répondu, les paiements émis, les demandes 
+        traitées, etc.) au cours de l'exercice qui ont respecté une norme 
+        relative aux services particulière à un service.
     datastore_type: numeric
     format_type: Numeric or ND
     obligation: Optional
@@ -1208,14 +1462,16 @@ resources:
       fr: Volumes totaux
     description:
       en: > 
-        Identifies the total number of final outputs issued appropriate to the service (eg. payments 
-        issued, requests completed, etc) during the fiscal year. Blank indicates no information available, 
-        while 0 indicates no final outputs issued.
+        Identifies the total number of final outputs issued appropriate to 
+        the service (eg. payments issued, requests completed, etc) during the 
+        fiscal year. Blank indicates no information available, while 0 
+        indicates no final outputs issued.
       fr: >
-        'Indique le nombre total d'opérations de service effectuées (p. ex. les paiements émis, les 
-        demandes traitées, etc.) relativement à un service au cours de l'exercice. Un champ vide 
-        indique qu''aucune information n''est disponible, tandis que 0 indique qu''aucune opération 
-        n'a été effectuée. '
+        'Indique le nombre total d'opérations de service effectuées (p. ex. 
+        les paiements émis, les demandes traitées, etc.) relativement à un 
+        service au cours de l'exercice. Un champ vide indique qu''aucune 
+        information n''est disponible, tandis que 0 indique qu''aucune 
+        opération n'a été effectuée. '
     datastore_type: numeric
     format_type: Numeric or ND
     obligation: Optional
@@ -1230,8 +1486,12 @@ resources:
       en: Performance
       fr: Performance
     description:
-      en: Identifies the result achieved for this service standard. This is the volume_meeting_target divided by the total_volume
-      fr: Identifie les résultats atteints pour cette norme de service. Il s'agit du volume_meeting_target divisé par le total_volume
+      en: > 
+        Identifies the result achieved for this service standard. This is the 
+        volume_meeting_target divided by the total_volume
+      fr: > 
+        Identifie les résultats atteints pour cette norme de service. Il s'agit
+        du volume_meeting_target divisé par le total_volume
     datastore_type: numeric
     format_type: Numeric or ND
     obligation: Optional
@@ -1266,13 +1526,17 @@ resources:
       fr: La cible était-elle atteinte
     description:
       en: > 
-        'A yes, no or not applicable field that is automatically calculated for target_type "Percentage of outcomes", 
-        where "Not applicable" is autopopulated when field total_volume is reported as 0. Otherwise the result is 
-        self-reported by departments for target_type "Other type of target". '
+        'A yes, no or not applicable field that is automatically calculated for
+        target_type "Percentage of outcomes", where "Not applicable" is 
+        autopopulated when field total_volume is reported as 0. Otherwise the 
+        result is self-reported by departments for target_type "Other type of 
+        target".'
       fr: > 
-        'Un champ oui, non ou non-applicable calculé automatiquement pour target_type « Pourcentage de résultats », 
-        où « Sans objet » est rempli automatiquement lorsque le champ total_volume est 0. Dans le cas contraire, le 
-        résultat est autodéclaré par les ministères pour target_type « Autre type de cible ». '
+        'Un champ oui, non ou sans objet calculé automatiquement pour 
+        target_type « Pourcentage de résultats », où « Sans objet » est rempli 
+        automatiquement lorsque le champ total_volume est 0. Dans le cas 
+        contraire, le résultat est autodéclaré par les ministères pour 
+        target_type « Autre type de cible ». '
     datastore_type: text
     format_type: Free text
     obligation: Optional
@@ -1282,8 +1546,12 @@ resources:
       en: URL to Service Standards and Targets (English)
       fr: URL vers les normes relatives aux services et les cibles (anglais)
     description:
-      en: Identifies the departmental webpage (Canada.ca) where the service standards and targets are published.
-      fr: Indique la page Web ministérielle (Canada.ca) où les normes relatives aux services et les cibles sont publiées.
+      en: > 
+        Identifies the departmental webpage (Canada.ca) where the service 
+        standards and targets are published.
+      fr: > 
+        Indique la page Web ministérielle (Canada.ca) où les normes relatives 
+        aux services et les cibles sont publiées.
     datastore_type: text
     format_type: Free text
     obligation: Optional
@@ -1295,8 +1563,12 @@ resources:
       en: URL to Service Standards and Targets (French)
       fr: URL vers les normes relatives aux services et les cibles (français)
     description:
-      en: Identifies the departmental webpage (Canada.ca) where the service standards and targets are published.
-      fr: Indique la page Web ministérielle (Canada.ca) où les normes relatives aux services et les cibles sont publiées.
+      en: > 
+        Identifies the departmental webpage (Canada.ca) where the service 
+        standards and targets are published.
+      fr: > 
+        Indique la page Web ministérielle (Canada.ca) où les normes relatives 
+        aux services et les cibles sont publiées.
     datastore_type: text
     format_type: Free text
     obligation: Mandatory
@@ -1309,8 +1581,12 @@ resources:
       en: URL to Real-Time Performance Results (English)
       fr: URL aux résultats de rendement en temps réel (anglais)
     description:
-      en: Identifies the departmental webpage where the real-time performance results for a service are published.
-      fr: Identifie la site Web du service sur laquelle les résultats de performance en temps réel d'un service sont publiés
+      en: > 
+        Identifies the departmental webpage where the real-time performance 
+        results for a service are published.
+      fr: > 
+        Identifie la site Web du service sur laquelle les résultats de 
+        performance en temps réel d'un service sont publiés
     excel_required: true
     format_type: Free text
     obligation: Mandatory
@@ -1322,8 +1598,12 @@ resources:
       en: URL to Real-Time Performance Results (French)
       fr: URL aux résultats de rendement en temps réel (français)
     description:
-      en: Identifies the departmental webpage where the real-time performance results for a service are published.
-      fr: Identifie la site Web du service sur laquelle les résultats de performance en temps réel d'un service sont publiés
+      en: > 
+        Identifies the departmental webpage where the real-time performance 
+        results for a service are published.
+      fr: > 
+        Identifie la site Web du service sur laquelle les résultats de 
+        performance en temps réel d'un service sont publiés
     format_type: Free text
     datastore_type: text
     obligation: Optional
@@ -1435,19 +1715,6 @@ resources:
   trigger_strings:  # yaml | not supported
     service_std_target_error: "Please enter a decimal value between zero and one: %"
 
-  examples:
-    record:
-      fiscal_yr: 2024
-      service_id: "4"
-      service_std_id: "7"
-      service_std_en: Process applications and notify participants of results within 45 days.
-      service_std_fr: Traiter les demandes et communiquer les résultats aux participants dans un délai de 45 jours.
-      service_std_url_en: http://www.agr.gc.ca/eng/about-us/planning-and-reporting/service-standards-at-agriculture-and-agri-food-canada/agriculture-and-agri-food-canada-service-standards-quarterly-results-fiscal-year-2017-2018/?id=1481057048109
-      service_std_url_fr: http://www.agr.gc.ca/fra/a-propos-de-nous/planification-et-rapports/normes-de-service-d-agriculture-et-agroalimentaire-canada/normes-de-service-d-agriculture-et-agroalimentaire-canada-resultats-trimestriels-exercice-2017-2018/?id=1481057048109
-      service_std_type: [TML, ACS]
-      service_std_target: "0.95"
-      realtime_result_url_en: ND
-      realtime_result_url_fr: ND
 
 excel_edge_style:
   PatternFill:
