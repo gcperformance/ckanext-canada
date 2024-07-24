@@ -226,8 +226,8 @@ resources:
 
   - datastore_id: service_scope
     label:
-      en: External Service or Internal Enterprise Service
-      fr: Service externe ou service intégré interne
+      en: Service scope
+      fr: Étendue du service
     description: #GE: this description is bad and long
       en: Indicates whether the service is external or internal to government.
       fr: > #GE: translate this better
